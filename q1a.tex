@@ -1,0 +1,58 @@
+% !TeX root = ./TMA03.tex
+To prove that if $1 < m \leq n$, then there cannot exist a set of $n$ mutually orthogonal $m \times n$ Latin rectangles, $(MOLR)_{m\times n}$, consider the following (which follows the argument given in \hill \textbf{Theorem 10.18}, p122.).
+
+Assume we have a set of $(MOLR)_{m\times n}$ where $2 \leq m \leq n$ and with symbols from the alphabet $F_n = \{\lambda_1, \lambda_2,\ldots,\lambda_n\}$.\marginnote{Glossary: Alphabet p5.} Each of the Latin rectangles in the set of $(MOLR)_{m\times n}$ may have their symbols renamed while still maintaining the orthogonality of the set. For example, assume that we have a set of two $(MOLR)_{2\times 3}$, namely:
+
+\begin{equation*}
+\left\{
+\begin{array}{ccc}
+\lambda_1 & \lambda_2 & \lambda_3 \\ 
+\lambda_2 & \lambda_3 & \lambda_1
+\end{array}
+,
+\begin{array}{ccc}
+\lambda_3 & \lambda_2 & \lambda_1 \\ 
+\lambda_1 & \lambda_3 & \lambda_2
+\end{array}
+\right\}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+\text{ then }
+\begin{array}{ccc}
+(\lambda_1,\lambda_3) & (\lambda_2,\lambda_2) & (\lambda_3,\lambda_1) \\ 
+(\lambda_2,\lambda_1) & (\lambda_3,\lambda_3) & (\lambda_1,\lambda_2)
+\end{array}.
+\end{equation*}
+Now, by renaming the symbols of each of the Latin rectangles in the set so that the symbols in the first row of each rectangle are $0,1,2$ in natural order, we obtain
+\begin{equation*}
+\left\{
+\begin{array}{ccc}
+0& 1 & 2 \\ 
+1 & 2 & 0
+\end{array}
+,
+\begin{array}{ccc}
+0 & 1 & 2 \\ 
+2 & 0 & 1
+\end{array}
+\right\}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+\text{ then }
+\begin{array}{ccc}
+(0,0) & (1,1) & (2,2) \\ 
+(1,2) & (2,0) & (0,1)
+\end{array},
+\end{equation*}
+showing that the two mutually orthogonal Latin rectangles in the set still remain mutually orthogonal after renaming the symbols in the way shown. So, in general, a set of $(MOLR)_{m\times n}$ can have the symbols in their first rows renamed so that each of the first rows of each rectangles are $0,1,\ldots,n-1$ in natural order and still maintain the orthogonality between pairs of rectangles in the set. Having established this, now consider the symbol in the first index position of the second row (i.e. row 1, column 0 using the indexing scheme given in the question) of each of the Latin rectangles. From the definition of a Latin rectangle given in the question this symbol cannot be $0$ as the first row of each rectangle is in the natural order of $0,1,\ldots,n-1$ so it must be one of the symbols in the set $\{1,2,\ldots,n-1\}$. Also, none of the symbols in the first column of the second row of each rectangle in the set can be the same, for if they were, then when superimposing one rectangle upon another a duplicate of $(0,0),(1,1),\dots(n-1,n-1)$ would appear in the first row of the superimposed rectangles.  This constrains the cardinality of the set of $(MOLR)_{m\times n}$ to a maximum of $n-1$. Consequently, it has been proved that if $1 < m \leq n$, then there cannot exist a set of $n$ mutually orthogonal $m \times n$ Latin rectangles as the maximum value of the cardinality of such a set is $n-1$.
+
+To determine the maximum possible number of mutually orthogonal $1\times n$ Latin rectangles consider the following cases for $n=1$, $n=2$ and $n=3$.
+
+For the case where $n=1$ then we have $1!=1$ Latin rectangle so there is no other rectangle for it to be mutually orthogonal to apart from itself.
+
+For the case where $n=2$ then we have $2!=2$  mutually orthogonal Latin rectangles: $[a\; b]$ and $[b\; a]$.
+
+For the case where $n=3$ then we have $3!=6$ mutually orthogonal Latin rectangles:
+$[a\;b\;c]$, $[a\;c\;b]$, $[b\;a\;c]$, $[b\;c\;a]$, $[c\;a\;b]$ and $[c\;b\;c]$.
+
+For the general case where we have a $1\times n$ Latin rectangles then we have the permutation of $n$ objects taken $n$ at a time:
+\[
+	^nP_n = \frac{n!}{(n-n)!} = n!
+\]
+In view of this the maximum possible number of mutually orthogonal $1\times n$ Latin rectangles is $n!$.

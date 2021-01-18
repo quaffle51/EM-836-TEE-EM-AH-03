@@ -1,0 +1,10 @@
+% !TeX root = ./TMA03.tex
+From the question preamble $p>1$ is prime and $q>1$ is an integer such that each of the prime factors of $q$ are greater or equal to $p$. Let $n=pq$. Then for $\lambda = 1,2,\ldots,n-1$, define $A_\lambda$ to be the $p\times n$ array with entries $a^{(\lambda)}_{i,j}\equiv\lambda i + j\Mod{n}$ for $i=0,1,\ldots,p-1$, $j=0,1,\ldots,n-1$. Now, in order to prove that $A_\lambda$ is a $p\times n$ Latin rectangle consider the following.
+
+The entries in $A_\lambda$, $a^{(\lambda)}_{i,j}$, are those in the $\Z_n = \{0,1,2,\ldots,n-1\}$ as $a^{(\lambda)}_{i,j}\equiv\lambda i + j\Mod{n}$, where $\lambda$ is non-zero. The rows are indexed by $0,1,\ldots,n-1$ and columns are indexed by $0,1,\ldots,p-1$ where $i$ refers to the row index and $j$ to that of the column index in the array element $a^{(\lambda)}_{i,j}$. Therefore, the array $A_\lambda$ is a $p\times n$ array, i.e. a rectangle with the number of columns greater than the number of rows. 
+
+Now, assume that two elements in a given row, row $i$ say, are the same at index locations $j$ and $j^\prime$. In this case we then have $a^{(\lambda)}_{i,j}$ = $a^{(\lambda)}_{i,j^\prime}$ in which case $\lambda i + j = \lambda i + j^\prime$ with arithmetic in $\Z_n$. As $\lambda \not= 0$ this implies that $j=j^\prime$ and therefore each element of the $i$-th row appears exactly once. 
+
+Similarly assume two elements are the same in two columns, column $j$ say. In this case we then have $a^{(\lambda)}_{i,j}$ = $a^{(\lambda)}_{i^\prime,j}$ in which case $\lambda i + j = \lambda i^\prime + j$ with, as before, arithmetic in $\Z_n$. As $\lambda \not= 0$ this implies $i=i^\prime$ and therefore each element of the $j$-th column are distinct. 
+
+Thus, the conditions for the array $A_\lambda$ to be that of a Latin rectangle have been met.

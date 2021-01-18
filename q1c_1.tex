@@ -1,0 +1,72 @@
+% !TeX root = ./TMA03.tex
+To determine the minimum distance of $C_{p,q}$ in terms of $p$ and $q$ consider the following.
+
+A code $C_{p,q}$ is formed from Latin rectangles $A_\lambda$ by taking as codewords all vectors of the form:
+\[
+	(i,j, a^{(1)}_{i,j}, a^{(2)}_{i,j},\ldots,a^{(n-1)}_{i,j})
+\]
+for $i=0,1,\ldots,p-1$ and $j=0,1,\ldots,n-1$ where $n=pq$. Now, $a^{(\lambda)}_{i,j} = \lambda i + j$ for $\lambda =1,2,\dots,n-1$ and the codewords can be generated using the generator matrix:
+\[
+	G = 
+	\begin{pmatrix}
+	1 & 0 & 1 & 2 & \cdots & n-1 \\ 
+	0 & 1 & 1 & 1 & \cdots & 1
+	\end{pmatrix}. 
+\]
+Thus, for example, each of the codewords shown in Table~\ref{table:codewords} can be generated from the generator matrix, $G$, as follows.
+\[
+	\begin{pmatrix} i & j\end{pmatrix}
+	\begin{pmatrix}
+	1 & 0 & 1 & 2 & 3 & 4 & 5\\ 
+	0 & 1 & 1 & 1 & 1 & 1 & 1 
+	\end{pmatrix}, 
+\]
+\[
+i=0,1,\ldots,p-1,\quad j=0,1,\ldots,n-1.
+\]
+As an example consider the case for $i=1$ and $j=5$; the codeword generated is thus:
+\begin{sagesilent}
+m=[(1, 0, 1, 2, 3, 4, 5), 
+   (0, 1, 1, 1, 1, 1, 1)]; 
+G = matrix(Integers(6),2, m);
+v = matrix([1, 5]);
+cw = v*G;
+\end{sagesilent}
+\[
+	\sage{latex(v)}\sage{latex(G)}=\sage{cw}.
+\]
+In order to determine the minimum distance between codewords for the general case consider what happens when $i$ and $j$ are both zero; $i$ is zero but $j$ is non-zero and visa-versa; and when both are non-zero. \marginnote{$i=0,1,\ldots,p-1$, $j=0,1,\ldots,pq-1.$}[-0.5cm]
+
+\begin{enumerate}
+\item %1
+When $i=0$ and $j=0$ then the codeword is the zero vector of length $pq+1$.
+\item %2
+When $i=0$ and $j\not=0$ then the codewords are of the form:
+\[
+\begin{pmatrix}
+0&j&j&\cdots&j
+\end{pmatrix}
+\]
+where the length of the vector is $pq+1$ so that the symbol represented by $j$ appears exactly $pq$ times. That is, the weight of the vector is $pq$.
+\item %3
+When $i\not=0$ and $j=0$ the the codewords are of the form:\marginnote{$\lambda = 1,2,\ldots,pq-1$.}[0.7cm]
+\[
+\begin{pmatrix}
+i&0&i&2i&\cdots&(pq-1)i
+\end{pmatrix}\Mod{pq},
+\]
+where the length of the vector is $pq+1$ and the symbol zero appears precisely once in the codewords generated in this fashion. This can easily been seen by considering the case where $i=p-1$ and $\lambda = pq-1$ (giving the maximum value of $\lambda i$), then  the last symbol of the codeword will be $\lambda i = (pq-1)(p-1) < pq$ and therefore, $\lambda i \not\equiv 0 \Mod{pq}$. Thus, the weights of these codewords are also $pq$.
+\item %4
+Finally, when $i\not= 0$ and $j\not=0$ the codewords are of the form
+\[
+\begin{pmatrix}
+i&j&i+j&2i+j&\cdots&(pq-1)i + j
+\end{pmatrix}\Mod{pq},
+\]
+where the length of the vector is $pq+1$ and the symbol zero appears precisely once in the codewords generated in this fashion. This can be seen by considering how and when the symbol zero is generated in the codeword. It is generated precisely when 
+\[
+	pq = \lambda i +j,\quad  \lambda = 1,2,\ldots,pq-1,
+\]
+which can only occur once in a codeword. So, again the weight of the codewords is equal to $pq$ when $i\not= 0$ and $j\not=0$.
+\end{enumerate}
+In view of the foregoing and given each codeword is distinct then the minimum distance of $C_{p,q}$ is $pq$ as each codeword differs from another in exactly $pq$ coordinate positions.

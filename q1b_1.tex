@@ -1,0 +1,16 @@
+% !TeX root = ./TMA03.tex
+To prove that $A_\lambda$ and $A_\mu$ are mutually orthogonal given that $\lambda \not= \mu$, thus forming a set $\{A_\lambda: 1\leq \lambda \leq n-1\}$ of $n-1$ mutually orthogonal Latin rectangles consider the following.
+
+First we prove that  the elements of the first row of each rectangle $A_\lambda$ and $A_\mu$ are equal as follows:
+
+Let the elements of the first rectangle be $a_{i,j} = \lambda i + j$ and those of the second rectangle be $b_{i,j} = \mu i +j$. When $i=0$, that is the first row of each rectangle, then
+\[
+	a_{0,j} = 0\times i + j = j; \quad \text{and}\quad b_{0,j} =  0\times i + j = j,
+\]
+and thus, elements of the first rows of each of the rectangles are equal corresponding to the column index, $j$, for $j = 0,1,\ldots,n-1$. 
+
+Now consider a row, $i$, which is not the first and as such $i \not=0$ and assume that the element $a_{i,j}=b_{i,j}$ in which case the rectangles $A_\lambda$ and $A_\mu$ are \textit{not} mutually orthogonal as the pair $(a_{i,j}, b_{i,j})$ will have occurred in the first row of the superposition of $A_\lambda$ on $A_\mu$. Then,
+\[
+	a_{i,j} = \lambda\times i + j \quad \text{and}\quad b_{i,j} =  \mu\times i + j,\quad i\not= 0,\quad j=0,1,\ldots,n-1,
+\]
+which implies that $\lambda = \mu$ which is a contradiction. As such each of the Latin rectangles in the set $\{A_\lambda: 1\leq \lambda \leq n-1\}$ are mutually orthogonal. 
