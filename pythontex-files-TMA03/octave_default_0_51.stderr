@@ -1,0 +1,3 @@
+warning: function name 'pcm' does not agree with function filename '/home/gordon/Dropbox/OU/M836/octave/H.m'
+warning: called from
+    /home/gordon/Dropbox/OU/M836/TMAs/TMA03/octave_default_0.m at line 100 column 17

@@ -13,4 +13,24 @@
 \left(\begin{array}{rrrrrrr}
 1 & 5 & 0 & 1 & 2 & 3 & 4
 \end{array}\right)}{}{}{}{}}
-%7f50fa01c8351fff91a864c3ba442821% md5sum of corresponding .sage file (minus "goboom", "current_tex_line", and pause/unpause lines)
+\newlabel{@sageinline3}{{%
+1 + x + x^{2} + x^{3} + x^{6}}{}{}{}{}}
+\newlabel{@sageinline4}{{%
+1 + x + x^{4} + x^{5} + x^{6} + x^{9}}{}{}{}{}}
+\newlabel{@sageinline5}{{%
+1 + x + x^{4} + x^{5} + x^{6} + x^{9}}{}{}{}{}}
+\newlabel{@sageinline6}{{%
+1 + 2 x + 2 x^{2} + 2 x^{3} + 2 x^{4} + 2 x^{5} + 4 x^{6} + 4 x^{7} + 2 x^{8} + 2 x^{9} + 2 x^{10} + 2 x^{11} + 2 x^{12} + x^{15}}{}{}{}{}}
+\newlabel{@sageinline7}{{%
+1 + x^{15}}{}{}{}{}}
+\newlabel{@sageinline8}{{%
+56}{}{}{}{}}
+\newlabel{@sageinline9}{{%
+9}{}{}{}{}}
+\newlabel{@sageinline10}{{%
+64}{}{}{}{}}
+\newlabel{@sageinline11}{{%
+64}{}{}{}{}}
+\newlabel{@sageinline12}{{%
+15}{}{}{}{}}
+%3f472a636cc182911147562fb3d07245% md5sum of corresponding .sage file (minus "goboom", "current_tex_line", and pause/unpause lines)

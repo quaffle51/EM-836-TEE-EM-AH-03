@@ -1,1 +1,28 @@
 % !TeX root = ./TMA03.tex
+The following codewords are to be transmitted using interleaving to depth $3$.
+\begin{octavecode}
+function [c c1 c2 c3 c4 c5 c6 d e] = F;
+  c1 = [1 1 0 0 1 1 0];
+  c2 = [1 0 0 1 1 0 0];
+  c3 = [0 0 1 0 1 1 0];
+  c4 = [0 1 1 1 1 0 0];
+  c5 = [1 1 1 1 1 1 1];
+  c6 = [0 0 0 1 1 1 1];
+  c = [c1;c2;c3;c4;c5;c6];
+        
+  d = [c(1,:);c(2,:); c(3,:)];
+  e = [c(4,:);c(5,:); c(6,:)];
+endfunction
+
+[c c1 c2 c3 c4 c5 c6 d e] = F;
+\end{octavecode}
+\begin{align*}
+	\bm{c_1} &=\octavec{disp(c1)} \quad \bm{c_4} = \octavec{disp(c4)}\\
+	\bm{c_2} &=\octavec{disp(c2)} \quad \bm{c_5} = \octavec{disp(c5)}\\
+	\bm{c_3} &=\octavec{disp(c3)} \quad \bm{c_6} = \octavec{disp(c6)}
+\end{align*}
+We take as the first set of codewords: $\{\bm{c_1},\bm{c_2},\bm{c_3}\}$. The sequence of bits to be  transmitted is formed from the columns of the listing of $\bm{c_1}$, $\bm{c_2}$ and $\bm{c_3}$ given above. Thus the transmission is $\octavec{disp(d'(1,:))}$ $\octavec{disp(d'(2,:))}$ $\octavec{disp(d'(3,:))}$ $\octavec{disp(d'(4,:))}$ $\octavec{disp(d'(5,:))}$ $\octavec{disp(d'(6,:))}$ $\octavec{disp(d'(7,:))}$ where spaces have been placed between each set of three bits for clarity. In a similar way, $\bm{c_4}$, $\bm{c_5}$ and $\bm{c_6}$ are transmitted as $\octavec{disp(e'(1,:))}$ $\octavec{disp(e'(2,:))}$ $\octavec{disp(e'(3,:))}$ $\octavec{disp(e'(4,:))}$ $\octavec{disp(e'(5,:))}$ $\octavec{disp(e'(6,:))}$ $\octavec{disp(e'(7,:))}$.
+
+From \bth{12.3}{3}{42} if $D$ is a burst~$l$ error-correcting binary linear code interleaved to depth~$s$, then all bursts of length at most $sl$ will be corrected, provided that each codeword is affected by at most one burst error and by no other errors. Now, $D$ is a Ham$(3,2)$-code and is equivalent to the
+perfect $[7,4,3]$-code. Using \bdef{12.2}{3}{40} we determine that code $D$ is a $1$ burst error-correcting code (i.e. $l=1$).
+So interleaving a Ham$(3,2)$-code to depth $3$ (i.e. $s=3$) will ensure that all bursts of length no greater than $3$ will be corrected subject to the proviso outlined above.

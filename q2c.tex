@@ -1,1 +1,76 @@
 % !TeX root = ./TMA03.tex
+Recall that the Lloyd polynomial $L_2(x)$ is given by
+\[
+	2L_2(x) = 4x^2 - 4(n+1)x + (n^2 + n +2),
+\]
+or 
+\[
+	L_2(x) = 2x^2 - 2(n+1)x + \frac{n^2 + n +2}{2}.
+\]
+Supposing that $L_2(x)$ has two integer roots satisfying $3\leq x_1 < x_2 \leq n$; the roots of $L_2(x)$ are given by
+\begin{align*}
+	x_{1,2} &= \frac{2(n+1)\pm\sqrt{2^2(n+1)^2-4(2)(n^2+n+2)/2}}{4},\\
+	&= \frac{2(n+1)\pm2\sqrt{n^2+2n+1-n^2-n-2}}{4},\\
+	&= \frac{(n+1)\pm\sqrt{n-1)}}{2}.
+\end{align*}
+So, 
+\[
+	x_1 = \frac{(n+1)-\sqrt{n-1)}}{2}\;\text{  and  }\; x_2 = \frac{(n+1)+\sqrt{n-1)}}{2}.
+\]
+Now, consider the product of the two roots
+\begin{align*}
+x_1x_2 &= \frac{(n+1)-\sqrt{n-1)}}{2}\times \frac{(n+1)+\sqrt{n-1)}}{2},\\
+&= \frac{(n+1)^2 - (n-1)}{4},\\
+&= \frac{n^2 + 2n + 1 - n+1}{4},\\
+&= \frac{n^2 + n + 2}{4}=\frac{n^2 + n + 2}{2^2}.
+\end{align*}
+From part~(a) it was shown that $2^m=n^2 + n + 2$ so we have,\marginnote{$C$ is a nontrivial code so $n>5$ and $m>5$.}[1cm]
+\begin{align*}
+	x_1x_2 &= \frac{2^m}{2^2} = 2^{m-2},\quad m>5.
+\end{align*}
+Thus, both $x_1$ and $x_2$ are integer powers of $2$.
+
+If $x_1=2^a$ and $x_2=2^b$ it can be shown that $(2^{a+1} + 2^{b+1} - 1)^2 = 2^{m+2}-7$ as follows.
+\begin{align*}
+	x_1 + x_2 &= \frac{(n+1)-\sqrt{n-1)}}{2} + \frac{(n+1)+\sqrt{n-1)}}{2} = n+1,\\
+	2^a + 2^b &= n + 1,\\
+	n &= 2^a + 2^b - 1.
+\end{align*}
+So, 
+\begin{align*}
+	 2n &= 2^{a+1} + 2^{b+1} - 2 = (2^{a+1} + 2^{b+1} - 1) - 1,\\
+	 2n + 1 &= 2^{a+1} + 2^{b+1} - 1,\\
+	 (2n + 1)^2 &= (2^{a+1} + 2^{b+1} - 1)^2,\\
+	 (2^{a+1} + 2^{b+1} - 1)^2 &= 4n^2 + 4n +1.
+\end{align*}
+Now, from above $2^m=n^2+n+2$, thus $2^{m+2}=4n^2+4n+8$ and so $2^{m+2} - 7=4n^2+4n+1$. Consequently, we have
+\[
+	(2^{a+1} + 2^{b+1} - 1)^2 = 2^{m+2} - 7, \text{ as required.}
+\]
+
+Considering this last equation modulo $16$ a contradiction can be obtained thus proving that $L_2(x)$ cannot have two distinct integer roots for $1\leq x \leq n$ in the following way.
+
+First expand the left-hand side of the last equation; let $\alpha=2^{a+1} + 2^{b+1}$ to obtain
+\begin{align*}
+	(\alpha -1)^2 &= \alpha^2 - 2\alpha + 1.
+\end{align*}
+Next substitute back for $\alpha$ and  expand $\alpha^2$ to give
+\begin{align*}
+	(2^{a+1} + 2^{b+1})(2^{a+1} + 2^{b+1}) &= 2^{2a+2} + 2\cdot 2^{a+b+2} + 2^{2b+2},\\
+	 &= 2^{2a+2} + 2^{a+b+3} + 2^{2b+2}.
+\end{align*}
+So, substituting for the relevant parts in $\alpha^2 - 2\alpha + 1$ we get
+\begin{align*}
+	\alpha^2 - 2\alpha + 1 &= 2^{2a+2} + 2^{a+b+3} + 2^{2b+2} - 2(2^{a+1} + 2^{b+1}) + 1,\\
+	&= 2^{2a+2} + 2^{a+b+3} + 2^{2b+2} - (2^{a+2} + 2^{b+2}) + 1.
+\end{align*}
+Given that $3\leq 2^a < 2^b \leq n$ the minimum values on $a$ and $b$ are $2$ and $3$ respectively.  Therefore, the last expression is divisible by $2^4$ with remainder $1$, thus
+\begin{align*}
+	(2^{a+1} + 2^{b+1} - 1)^2 &= 2^{2a+2} + 2^{a+b+3} + 2^{2b+2} - (2^{a+2} + 2^{b+2}) + 1,\\
+	&\equiv 1 \Mod{16}.
+\end{align*}
+Now considering the right-hand side of $(2^{a+1} + 2^{b+1} - 1)^2 = 2^{m+2} - 7$. It was established earlier that if $C$ is nontrivial then $m>5$. As such $2^{m+2} - 7$ is divisible by $2^4$ with remainder $-7$. That is
+\[
+	2^{m+2} - 7 \equiv -7 \equiv 9 \Mod{16}.
+\]
+We have now established a contradiction; $1\not\equiv 9 \Mod{16}$ therefore proving that $L_2(x)$ cannot have two distinct integer roots for  $1\leq x \leq n$.

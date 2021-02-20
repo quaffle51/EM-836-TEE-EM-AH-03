@@ -1,1 +1,292 @@
 % !TeX root = ./TMA03.tex
+\begin{comment}
+Algorithm:
+
+Suppose that $C_1$ is a binary linear $[n_1=7 , k_1=1 , d_1=7 ]$-code and that $C_2$ is a binary linear $[n_2=8 ,k_2= 4 , d_2=4 ]$-code.
+Cross-interleaving of $C_1$ with $C_2$ is performed as follows.
+\begin{itemize}
+\item[1]
+Encode the message using $C_1$ and interleave this code to depth $k_2=4$.
+
+As described above, this means that within each set of $k_2=4$
+codewords (each codeword having length $n_1=7$), we form $n_1=7$ vectors of length $k_2=4$
+by taking all the first coordinates, all the second coordinates, and so on. 
+\item[2]
+Each such vector (of length $k_2=4$) can now be regarded as a message and encoded
+using the code $C_2$. The resulting codewords of $C_2$ can then be interleaved to
+any desired depth, say $s=3$.
+\end{itemize}
+
+Suppose that $C_1$ is the binary repetition code with generator matrix
+\[
+	G_1 = \begin{pmatrix}
+	1 & 1 & 1 & 1 & 1 & 1 & 1
+	\end{pmatrix}.
+\]
+Note that $C_1$ is a binary $[7,1,7]$ repetition code.
+
+Suppose that $C_2$ is the code $RM(1,3)$ with generator matrix
+\[
+	G_2 = \begin{pmatrix}
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ 
+	0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \\ 
+	0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \\ 
+	0 & 0 & 0 & 0 & 1 & 1 & 1 & 1
+	\end{pmatrix} 
+\]
+Note that $RM(1,3)$ is a binary linear $[8,4,4]$-code.
+\end{comment}
+\begin{octavecode}
+function [c d m] = q4c;
+  G2 = [1 1 1 1 1 1 1 1;
+        0 1 0 1 0 1 0 1;
+        0 0 1 1 0 0 1 1;
+        0 0 0 0 1 1 1 1
+       ];
+       
+  G1 = [1 1 1 1 1 1 1];
+  
+  m  = [1 0 1 1  0 1 1 0   0 0 0 0];
+  c  = [];
+  d  = [];
+  for i = 1:size(m,2)
+    c = [c; mod(m(1,i).*G1,2)];
+  endfor
+  for i = 1:7
+  	d = [d; mod(c([1:4],i)' * G2,2)];
+  endfor
+  for i = 1:7
+  	d = [d; mod(c([5:8],i)' * G2,2)];
+  endfor
+  for i = 1:7
+  	d = [d; mod(c([9:12],i)' * G2,2)];
+  endfor
+
+endfunction
+[c d m] = q4c;
+\end{octavecode}
+\begin{comment}
+Consider the messages is $\octavec{disp(m)}\ldots$,  encoded using $C_1$ and interleaved to depth $4$. The codewords of $C_1$ are
+\begin{align*}
+	\bm{c_1}    = \bm{m_1}G_1    &= \octavec{disp(c(1,:))}\\
+	\bm{c_2}    = \bm{m_2}G_1    &= \octavec{disp(c(2,:))}\\
+	\bm{c_3}    = \bm{m_3}G_1    &= \octavec{disp(c(3,:))}\\
+	\bm{c_4}    = \bm{m_4}G_1    &= \octavec{disp(c(4,:))}\\\\
+	\bm{c_5}    = \bm{m_5}G_1    &= \octavec{disp(c(5,:))}\\
+	\bm{c_6}    = \bm{m_6}G_1    &= \octavec{disp(c(6,:))}\\
+	\bm{c_7}    = \bm{m_7}G_1    &= \octavec{disp(c(7,:))}\\
+	\bm{c_8}    = \bm{m_8}G_1    &= \octavec{disp(c(8,:))}\\
+%	\bm{c_9}    = \bm{m_9}G_1    &= \octavec{disp(c(9,:))}
+%	\bm{c_{10}} = \bm{m_{10}}G_1 &= \octavec{disp(c(10,:))}\\
+%	\bm{c_{11}} = \bm{m_{11}}G_1 &= \octavec{disp(c(11,:))}\\
+%	\bm{c_{12}} = \bm{m_{12}}G_1 &= \octavec{disp(c(12,:))}\\\\
+%	\bm{c_{13}} = \bm{m_{13}}G_1 &= \octavec{disp(c(13,:))}\\
+%	\bm{c_{14}} = \bm{m_{14}}G_1 &= \octavec{disp(c(14,:))}\\
+%	\bm{c_{15}} = \bm{m_{15}}G_1 &= \octavec{disp(c(15,:))}\\
+%	\bm{c_{16}} = \bm{m_{16}}G_1 &= \octavec{disp(c(16,:))}\\\\
+%	\bm{c_{17}} = \bm{m_{17}}G_1 &= \octavec{disp(c(17,:))}\\
+%	\bm{c_{18}} = \bm{m_{18}}G_1 &= \octavec{disp(c(18,:))}\\
+%	\bm{c_{19}} = \bm{m_{19}}G_1 &= \octavec{disp(c(19,:))}\\
+%	\bm{c_{20}} = \bm{m_{20}}G_1 &= \octavec{disp(c(20,:))}
+	\vdots
+\end{align*}
+Interleaving produces the vector
+\[
+	\octavec{disp(c([1:4],1)')} \;
+	\octavec{disp(c([1:4],2)')} \;
+	\octavec{disp(c([1:4],3)')} \;
+	\octavec{disp(c([1:4],4)')} \;
+	\octavec{disp(c([1:4],5)')} \;
+	\octavec{disp(c([1:4],6)')} \;
+	\octavec{disp(c([1:4],7)')} \;
+	\octavec{disp(c([5:8],1)')} \;
+	\octavec{disp(c([5:8],2)')} \;
+	\octavec{disp(c([5:8],3)')} \;
+	\octavec{disp(c([5:8],4)')} \;
+	\octavec{disp(c([5:8],5)')} \;
+	\octavec{disp(c([5:8],6)')} \;
+	\octavec{disp(c([5:8],7)')}
+\]
+This vector is then encoded four bits at a time to produce eight codewords of $C_2$.
+\begin{align*}
+	\bm{d_1} =    (\octavec{disp(c([1: 4],1)')})G_2 &= \octavec{disp(d(1,:))}\\
+	\bm{d_2} =    (\octavec{disp(c([1: 4],2)')})G_2 &= \octavec{disp(d(2,:))}\\
+	\bm{d_3} =    (\octavec{disp(c([1: 4],3)')})G_2 &= \octavec{disp(d(3,:))}\\\\
+	\bm{d_4} =    (\octavec{disp(c([1: 4],4)')})G_2 &= \octavec{disp(d(4,:))}\\
+	\bm{d_5} =    (\octavec{disp(c([1: 4],5)')})G_2 &= \octavec{disp(d(5,:))}\\
+	\bm{d_6} =    (\octavec{disp(c([1: 4],6)')})G_2 &= \octavec{disp(d(6,:))}\\\\
+	\bm{d_7} =    (\octavec{disp(c([1: 4],7)')})G_2 &= \octavec{disp(d(7,:))}\\
+	\bm{d_8} =    (\octavec{disp(c([5: 8],1)')})G_2 &= \octavec{disp(d(8,:))}\\
+	\bm{d_9} =    (\octavec{disp(c([5: 8],2)')})G_2 &= \octavec{disp(d(9,:))}\\\\
+	\bm{d_{10}} = (\octavec{disp(c([5: 8],3)')})G_2 &= \octavec{disp(d(10,:))}\\
+	\bm{d_{11}} = (\octavec{disp(c([5: 8],4)')})G_2 &= \octavec{disp(d(11,:))}\\
+	\bm{d_{12}} = (\octavec{disp(c([5: 8],5)')})G_2 &= \octavec{disp(d(12,:))}\\\\
+	\bm{d_{13}} = (\octavec{disp(c([5: 8],6)')})G_2 &= \octavec{disp(d(13,:))}\\
+	\bm{d_{14}} = (\octavec{disp(c([5: 8],7)')})G_2 &= \octavec{disp(d(14,:))}\\
+	\bm{d_{15}} = (\octavec{disp(c([9:12],1)')})G_2 &= \octavec{disp(d(15,:))}
+\end{align*}
+If we now interleave $C_2$ to a depth $3$, we obtain the vector
+\begin{align*}
+	&\octavec{disp(d([1:3],:)'(1,:))} \;\octavec{disp(d([1:3],:)'(2,:))} \;
+	\octavec{disp(d([1:3],:)'(3,:))} \;\octavec{disp(d([1:3],:)'(4,:))} \;
+	\octavec{disp(d([1:3],:)'(5,:))} \;\octavec{disp(d([1:3],:)'(6,:))} \;
+	\octavec{disp(d([1:3],:)'(7,:))} \;\octavec{disp(d([1:3],:)'(8,:))}\\
+	&\octavec{disp(d([4:6],:)'(1,:))} \;\octavec{disp(d([4:6],:)'(2,:))} \;
+	\octavec{disp(d([4:6],:)'(3,:))} \;\octavec{disp(d([4:6],:)'(4,:))} \;
+	\octavec{disp(d([4:6],:)'(5,:))} \;\octavec{disp(d([4:6],:)'(6,:))} \;
+	\octavec{disp(d([4:6],:)'(7,:))} \;\octavec{disp(d([4:6],:)'(8,:))}\\
+	&\octavec{disp(d([7:9],:)'(1,:))} \;\octavec{disp(d([7:9],:)'(2,:))} \;
+	\octavec{disp(d([7:9],:)'(3,:))} \;\octavec{disp(d([7:9],:)'(4,:))} \;
+	\octavec{disp(d([7:9],:)'(5,:))} \;\octavec{disp(d([7:9],:)'(6,:))} \;
+	\octavec{disp(d([7:9],:)'(7,:))} \;\octavec{disp(d([7:9],:)'(8,:))}\\
+	&\octavec{disp(d([10:12],:)'(1,:))} \;\octavec{disp(d([10:12],:)'(2,:))} \;
+	\octavec{disp(d([10:12],:)'(3,:))} \;\octavec{disp(d([10:12],:)'(4,:))} \;
+	\octavec{disp(d([10:12],:)'(5,:))} \;\octavec{disp(d([10:12],:)'(6,:))} \;
+	\octavec{disp(d([10:12],:)'(7,:))} \;\octavec{disp(d([10:12],:)'(8,:))}\\
+	&\octavec{disp(d([13:15],:)'(1,:))} \;\octavec{disp(d([13:15],:)'(2,:))} \;
+	\octavec{disp(d([13:15],:)'(3,:))} \;\octavec{disp(d([13:15],:)'(4,:))} \;
+	\octavec{disp(d([13:15],:)'(5,:))} \;\octavec{disp(d([13:15],:)'(6,:))} \;
+	\octavec{disp(d([13:15],:)'(7,:))} \;\octavec{disp(d([13:15],:)'(8,:))} \;\ldots
+\end{align*}
+where each line corresponds to a group of $s=3$ codewords of $C2$.
+
+It should be possible to correct a burst of length $s(d_2-1) = 3(4 - 1)=\sage{3*(4-1)}$, provided it affects only one group of $s$ codewords of $C_2$.
+\end{comment}
+Given that the received vector is
+
+\begin{octavecode}
+function [d C2] = q4c_1;
+  d = [1 1 0 0 0 0 1 1;
+       1 1 0 0 0 0 1 1;
+       1 1 0 0 0 0 1 1;
+       
+       1 1 0 0 1 1 0 1;
+       1 1 0 0 1 1 0 1;
+       1 1 0 0 1 1 0 1;
+       
+       1 1 0 0 0 0 1 1;
+       0 1 1 0 0 1 1 0;
+       0 1 1 0 0 1 1 0;
+       
+       0 1 1 0 0 1 1 0;
+       0 1 1 0 0 1 1 0;
+       0 1 1 0 0 1 1 0;
+       
+       0 1 1 0 0 1 1 0;
+       0 1 1 0 0 1 1 0;
+       0 0 0 0 0 0 0 0
+      ];
+       
+  G2 = [1 1 1 1 1 1 1 1;
+        0 1 0 1 0 1 0 1;
+        0 0 1 1 0 0 1 1;
+        0 0 0 0 1 1 1 1
+       ];
+  
+  C2 = [];
+  
+  for i = 0:1
+    for j = 0:1
+      for k = 0:1
+        for l = 0:1
+          C2 = [C2; mod([i j k l]*G2,2)];
+        endfor
+      endfor
+    endfor
+  endfor
+endfunction
+[d C2] = q4c_1;
+\end{octavecode}
+\begin{align*}
+	&\octavec{disp(d([1:3],:)'(1,:))} \;\octavec{disp(d([1:3],:)'(2,:))} \;
+	\octavec{disp(d([1:3],:)'(3,:))} \;\octavec{disp(d([1:3],:)'(4,:))} \;
+	\octavec{disp(d([1:3],:)'(5,:))} \;\octavec{disp(d([1:3],:)'(6,:))} \;
+	\octavec{disp(d([1:3],:)'(7,:))} \;\octavec{disp(d([1:3],:)'(8,:))}\\
+	&\octavec{disp(d([4:6],:)'(1,:))} \;\octavec{disp(d([4:6],:)'(2,:))} \;
+	\octavec{disp(d([4:6],:)'(3,:))} \;\octavec{disp(d([4:6],:)'(4,:))} \;
+	\octavec{disp(d([4:6],:)'(5,:))} \;\octavec{disp(d([4:6],:)'(6,:))} \;
+	\octavec{disp(d([4:6],:)'(7,:))} \;\octavec{disp(d([4:6],:)'(8,:))}\\
+	&\octavec{disp(d([7:9],:)'(1,:))} \;\octavec{disp(d([7:9],:)'(2,:))} \;
+	\octavec{disp(d([7:9],:)'(3,:))} \;\octavec{disp(d([7:9],:)'(4,:))} \;
+	\octavec{disp(d([7:9],:)'(5,:))} \;\octavec{disp(d([7:9],:)'(6,:))} \;
+	\octavec{disp(d([7:9],:)'(7,:))} \;\octavec{disp(d([7:9],:)'(8,:))}\\
+	&\octavec{disp(d([10:12],:)'(1,:))} \;\octavec{disp(d([10:12],:)'(2,:))} \;
+	\octavec{disp(d([10:12],:)'(3,:))} \;\octavec{disp(d([10:12],:)'(4,:))} \;
+	\octavec{disp(d([10:12],:)'(5,:))} \;\octavec{disp(d([10:12],:)'(6,:))} \;
+	\octavec{disp(d([10:12],:)'(7,:))} \;\octavec{disp(d([10:12],:)'(8,:))}\\
+	&\octavec{disp(d([13:15],:)'(1,:))} \;\octavec{disp(d([13:15],:)'(2,:))} \;
+	\octavec{disp(d([13:15],:)'(3,:))} \;\octavec{disp(d([13:15],:)'(4,:))} \;
+	\octavec{disp(d([13:15],:)'(5,:))} \;\octavec{disp(d([13:15],:)'(6,:))} \;
+	\octavec{disp(d([13:15],:)'(7,:))} \;\octavec{disp(d([13:15],:)'(8,:))} \;\ldots
+\end{align*}
+unscrambling the interleaving, gives the received vectors
+\begin{align*}
+	\bm{d_1} &= \octavec{disp(d(1,:))}\\
+	\bm{d_2} &= \octavec{disp(d(2,:))}\\
+	\bm{d_3} &= \octavec{disp(d(3,:))}\\\\
+	\bm{d_4} &= \octavec{disp(d(4,:))}\\
+	\bm{d_5} &= \octavec{disp(d(5,:))}\\
+	\bm{d_6} &= \octavec{disp(d(6,:))}\\\\
+	\bm{d_7} &= \octavec{disp(d(7,:))}\\
+	\bm{d_8} &= \octavec{disp(d(8,:))}\\
+	\bm{d_9} &= \octavec{disp(d(9,:))}\\\\
+	\bm{d_{10}} &= \octavec{disp(d(10,:))}\\
+	\bm{d_{11}} &= \octavec{disp(d(11,:))}\\
+	\bm{d_{12}} &= \octavec{disp(d(12,:))}\\\\
+	\bm{d_{13}} &= \octavec{disp(d(13,:))}\\
+	\bm{d_{14}} &= \octavec{disp(d(14,:))}\\
+	\bm{d_{15}} &= \octavec{disp(d(15,:))}
+\end{align*}
+The sixteen codewords of $C_2$ are
+\begin{align*}
+	[0\;0\;0\;0]\,G_2 &= \octavec{disp(C2(1,:))}\\
+	[0\;0\;0\;1]\,G_2 &= \octavec{disp(C2(2,:))}\\
+	[0\;0\;1\;0]\,G_2 &= \octavec{disp(C2(3,:))}\\
+	[0\;0\;1\;1]\,G_2 &= \octavec{disp(C2(4,:))}\\
+	[0\;1\;0\;0]\,G_2 &= \octavec{disp(C2(5,:))}\\
+	[0\;1\;0\;1]\,G_2 &= \octavec{disp(C2(6,:))}\\
+	[0\;1\;1\;0]\,G_2 &= \octavec{disp(C2(7,:))}\\
+	[0\;1\;1\;1]\,G_2 &= \octavec{disp(C2(8,:))}\\
+	[1\;0\;0\;0]\,G_2 &= \octavec{disp(C2(9,:))}\\
+	[1\;0\;0\;1]\,G_2 &= \octavec{disp(C2(10,:))}\\
+	[1\;0\;1\;0]\,G_2 &= \octavec{disp(C2(11,:))}\\
+	[1\;0\;1\;1]\,G_2 &= \octavec{disp(C2(12,:))}\\
+	[1\;1\;0\;0]\,G_2 &= \octavec{disp(C2(13,:))}\\
+	[1\;1\;0\;1]\,G_2 &= \octavec{disp(C2(14,:))}\\
+	[1\;1\;1\;0]\,G_2 &= \octavec{disp(C2(15,:))}\\
+	[1\;1\;1\;1\,]G_2 &= \octavec{disp(C2(16,:))}\\
+\end{align*}
+Thus, it is seen that $\bm{d_4}$, $\bm{d_5}$ and $\bm{d_6}$ are invalid codewords. So the interleaved vector produced by $C_1$ must have had the form
+\[
+	\octavec{disp(c([1:4],1)')} \;
+	\octavec{disp(c([1:4],2)')} \;
+	\octavec{disp(c([1:4],3)')} \;
+%	\octavec{disp(c([1:4],4)')} \;
+%	\octavec{disp(c([1:4],5)')} \;
+%	\octavec{disp(c([1:4],6)')} \;
+	????\;????\;????\;
+	\octavec{disp(c([1:4],7)')} \;
+	\octavec{disp(c([5:8],1)')} \;
+	\octavec{disp(c([5:8],2)')} \;
+	\octavec{disp(c([5:8],3)')} \;
+	\octavec{disp(c([5:8],4)')} \;
+	\octavec{disp(c([5:8],5)')} \;
+	\octavec{disp(c([5:8],6)')} \;
+	\octavec{disp(c([5:8],7)')}
+\]
+where $?$ denotes a bit which may be incorrect. Hence we have
+\begin{align*}
+	\bm{c_1}  &= 111???1\\
+	\bm{c_2}  &= 000???0\\
+	\bm{c_3}  &= 111???1\\
+	\bm{c_4}  &= 111???1\\
+	\bm{c_5}  &= 0000000\\
+	\bm{c_6}  &= 1111111\\
+	\bm{c_7}  &= 1111111\\
+	\bm{c_8}  &= 0000000
+\end{align*}
+Since $C_1$ has a minimum distance of $7$ and the majority of symbols in the codewords $\bm{c_1}$, $\bm{c_2}$, $\bm{c_3}$ and $\bm{c_4}$ are either $1$'s or $0$'s,  then we must have $\bm{c_1} = 1111111$, $\bm{c_2} = 0000000$, $\bm{c_3} = 1111111$ and $\bm{c_4} = 1111111$. 
+
+Finally, the first $8$ messages bits, assuming that a single burst of length at most $9$ had affected the transmission, will have been $10110110$.
+
+\rule{\textwidth}{2px}

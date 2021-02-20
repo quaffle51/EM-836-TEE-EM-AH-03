@@ -1,1 +1,38 @@
 % !TeX root = ./TMA03.tex
+From \textbf{Theorem~7.2}\bcn{2}{27} if $r>0$ then $RM(r-1,m)$ is contained in $RM(r,m)$. 
+
+We are considering the cases for $r=1$ and for $m\geq1$. 
+
+Now from \textbf{Definition~7.3}\bcn{2}{24} the generator matrix  $G(0,m) = [11\cdots1]$ is of length $2^m$ bits for $m>0$. 
+
+$RM(0,m)$ is a binary repetition code and therefore has precisely two codeword which are of length $2^m$; namely the all zero codeword and the all ones codeword as $G(0,m)$ is multiplied on the left by $[0]$ or $[1]$ to generate the codewords.
+
+This establishes that each of the vectors in $\{\bm{0}, \bm{1}\}$ of lengths $2^m$ is contained in $RM(1,m)$. These respectively have weights of $0$ and $2^m$ and as such $A_0 =1$ and $A_{2m}=1$. These are the respective coefficients for $z^0$ and $z^{2m}$ in the polynomial $1 + (2^{m+1}-2)z^{2^{m-1}} + z^{2{m}}$.
+
+Now, looking at the codewords of $RM(1,1)$, $RM(1,2)$ and $RM(1,3)$ and considering the weights of the codewords other than the all zero codeword and the all ones codeword of each of these codes. 
+
+From part~(a) these are $2$, $6$ and $14$ for $m$ equal to $1,2,3$ respectively and are the values associated with the middle coefficient of the weight enumerator, namely $2^{m+1}-2$. Thus,
+\[
+	\sum_{i=1}^m 2^i = 2^{m+1} - 2.
+\]
+Note firstly that when $m=1$ we have $2 = 2^{1+1} - 2$. Assume inductively, that when $m=k$ the result is true i.e. assume that
+\[
+	\sum_{i=1}^k 2^i = 2^{k+1} - 2 \text{ is true.}
+\]
+Then the sum for $m=k+1$ may be written as 
+\[
+	\sum_{i=1}^{k+1} 2^i = \sum_{i=1}^k 2^i + 2^{k+1}.
+\]
+Using the above assumption this becomes
+\begin{align*}
+	\sum_{i=1}^{k+1} 2^i &= 2^{k+1} - 2 + 2^{k+1}.\\
+	&= 2^{k+2} - 2 \text{ which is the desired result for } m= k+1.
+\end{align*}
+It therefore follows that by induction the middle coefficient of weight enumerator is $2^{m+1} - 2$.
+
+Next we need to establish that the exponent of the indeterminate variable, $z$, is $2^{m-1}$. 
+
+Now $2^{m-1}$ is just $d$, the minimum distance of the codewords of the first order Reed-Muller codes. From \textbf{Theorem~7.1}\bcn{2}{25}, $RM(r,m)$ is a binary linear $[2^m,\sum_{i=0}^r\binom{m}{i},2^{m-r}]$-code. Thus, for first order Reed-Muller codes $RM(1,m)$ the minimum distance is $2^{m-1}$ which is the exponent of the middle indeterminate variable, $z$, of the weight enumerator $1 + (2^{m+1} - 2)z^{2^{m-1}} + z^{2^m}$.
+
+Thus, we have established that for $m\geq1$, $RM(1,m)$ has weight enumerator \[W_{C}(z) = 1 + (2^{m+1} - 2)z^{2^{m-1}} + z^{2^m}\].
+

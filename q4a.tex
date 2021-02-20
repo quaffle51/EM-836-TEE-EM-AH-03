@@ -1,1 +1,125 @@
 % !TeX root = ./TMA03.tex
+\begin{sagesilent}
+x = SR.var('x');
+g = 1 + x + x^2 + x^3 + x^6;
+h = 1 + x + x^4 + x^5 + x^6 + x^9;
+f = x^15 - 1;
+R.<x>=PolynomialRing(ZZ,1,order='neglex');
+l = R(g*h);
+R.<x>=PolynomialRing(GF(2),1,order='neglex');
+L = R(g*h);
+\end{sagesilent}
+Given that $C$ is the cyclic code $R_{15}=F_2[x]/(x^{15}-1)$ with generator polynomial $g(x) = \sage{R(g)}$ it can be shown that the check polynomial $h(x) = \sage{R(h)}$ \textit{does} corresponding to $g(x)$ by considering the following.
+
+By \hth{12.9\,(iii)}{147}, $g(x)$ is a factor of $x^{15}-1$ so that
+\[
+	x^{15}-1 = g(x)h(x).
+\]
+Thus, multiplying $g(x)$ by $h(x)=\sage{R(h)}$ gives
+\[
+	\sage{l},
+\]
+which is just equal to $\sage{L}$ and which in turn is equal to $x^{15}-1$ over $GF(2)$.
+
+To show that the $56$ polynomials in $R_{15}$: $\bm{0}$, $\bm{a_k}h(x)$, $\bm{b_k}h(x)$, $\bm{c_k}h(x)$ and $\bm{d_k}h(x)$ where
+\begin{itemize}
+\item
+$\bm{0}$, the all zero vector; 
+\item
+$\bm{a_k} = x^k$, $0\leq k\leq 14$;
+\item
+$\bm{b_k} = x^k(1+x) = x^k + x^{k+1}$, $0\leq k\leq 13$;
+\item
+$\bm{c_k} = x^k(1+x^2) = x^k + x^{k+2}$, $0\leq k\leq 13$; and
+\item
+$\bm{d_k} = x^k(1+x+x^2) = x^k + x^{k+1} + x^{k+2}$, $0\leq k\leq 13$,
+\end{itemize}
+are all distinct consider the following.
+
+The total number of such vectors is $1+15+14+13+13=\sage{1+15+14+13+13}$.
+
+Take as an example the vector $x^k(1+x)h(x)$ when $k$ takes a specific value, $k=13$ say. Then, for this example, first write down the polynomial $h(x) = 1 + x + x^4+x^5+x^6+x^9$ in vector form which is a vector of length $15$:
+\[
+	h(x) = [1 1 0 0 1 1 1 0 0 1 0 0 0 0 0].
+\]
+Multiplying $h(x)$ by $x^{13}$ rotates $h(x)$ by $13$ places, thus\marginnote{\hill p.146}
+\[
+	x^{13}h(x) = [ 0   0   1   1   1   0   0   1   0   0   0   0   0   1   1].
+\]
+Similarly, multiplying $h(x)$ by $x^{14}$ rotates $h(x)$ by $14$ places, thus
+\[
+	x^{14}h(x) = [1   0   0   1   1   1   0   0   1   0   0   0   0   0   1].
+\]
+Adding these two vectors element by element and reducing modulo $2$ gives the vector:
+\[
+x^{13}(1+x)h(x) = x^{13}h(x) + x^{14}h(x)\Mod{2} = [1   0   1   0   0   1   0   1   1   0   0   0   0   1   0].
+\]
+To convert this last vector into a base~10 integer we perform the element by element multiplication of it by $[ 2^{14}\,2^{13},\cdots,2^{0}]$.
+\begin{octavecode}
+v = [1 1 0 0 1 1 1 0 0 1 0 0 0 0 0];
+w = flip(w = 2.^[0:14]);
+z = sum(v.*w);
+\end{octavecode}
+Summing the elements the vector formed in this way gives $16384 + 8192 + 1024 + 512 + 256 + 32=\octavec{disp(z)}$. This is the value shown in the seventh row, sixth column of Table~\ref{tab: distinct}.
+
+All other values in the table can be obtained in a similar fashion. Inspection of Table~\ref{tab: distinct} shows all $56$ entries to be distinct.
+
+\begin{table}[!htp]\centering
+\begin{tabular}{rrrrrrrr}\toprule
+0	&	4199	&	9207	&	14598	&	18483	&	22612	&	27588	\\
+825	&	4958	&	9605	&	14911	&	19210	&	23839	&	28303	\\
+1355	&	5420	&	9916	&	15437	&	19832	&	24102	&	28981	\\
+1650	&	5653	&	10840	&	16244	&	20033	&	24914	&	29196	\\
+2479	&	6600	&	11306	&	16796	&	20987	&	25195	&	29822	\\
+2710	&	7299	&	12051	&	17061	&	21186	&	25625	&	30535	\\
+3300	&	8122	&	12457	&	17623	&	21680	&	\color{blue}26400\color{black}	& 	30874	\\
+4061	&	8398	&	13200	&	18414	&	22409	&	26877	&	32488	\\
+\bottomrule
+\end{tabular}
+\caption{Distinct representations in base $10$ of the $56$ vectors generated from polynomials in $R_{15}$ as described in the text.}\label{tab: distinct}
+\end{table}
+The vectors of burst length at most $3$ are those formed from the polynomials that premultiply $h(x)$ as given given above. Namely, $x^k$ is a vector with a $1$ in the $k^{th}$ position and other entries $0$; $x^k(1+x)$ is the vector with a $1$ in the $k^{th}$ and $(k+1)^{th}$ positions and other entries 0; $x^k(1+x^2)$ is the vector with a $1$ in the $k^{th}$ and $(k+2)^{th}$ positions and $0$ in other positions; and $x^k(1+x+x^2)$ is the vector with a $1$ in the $k^{th}$, $(k+1)^{th}$ and $(k+2)^{th}$ positions and $0$ in other positions. 
+\begin{sagesilent}
+	H= Matrix(GF(2),[
+	   [1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0],
+	   [0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0],
+	   [0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0],
+	   [0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0],
+	   [0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0],
+	   [0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1]
+	]);
+	r = Matrix(GF(2),[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]);
+\end{sagesilent}
+
+Now, recall from TMA02~Q4(c)(iii) that:
+\begin{quote}
+Given a polynomial $p(x)$ of degree at most $8$, the syndrome of
+p(x) is defined to be $p(x)h(x)$ (reduced modulo $x^9 - 1$), 
+where $h(x)$ is the check polynomial corresponding to $g(x)$.
+\end{quote}
+
+Consequently, the the $56$ polynomials: $\bm{0}$, $\bm{a_k}h(x)$, $\bm{b_k}h(x)$, $\bm{c_k}h(x)$ and $\bm{d_k}h(x)$ represent syndromes which because of the  way they were constructed have been reduced modulo $x^{15}-1$.  As these $56$ syndromes are all distinct then each one is in a distinct coset of $C$.
+
+To prove that $C$ is \textit{not} 3 error-correcting consider the following which follows the argument given in the solution of exercise~12.1:\marginnote{Block~\textbf{3} Solutions to Unit 12 p85.}
+
+$C$ is a cyclic code in $R_{15}$ so in this case $n=15$.  The degree of $g(x)$ is $r=6$ and therefore the dimension of the code is $k=n-r=\sage{15-6}$. As such, $C$ is a $[15,9]$-code (see \hth{12.12}{149}) and the number of cosets of $C$ is $2^{n-k} = 2^{6} = \sage{2^6}$. Compare this value with the number of vectors in $V(15,2)$ having weight no more than $3$, i.e.
+\[
+	\binom{15}{0} + \binom{15}{1} + \binom{15}{2} + \binom{15}{3} = \octavec{disp(binom(15,0))} + \octavec{disp(binom(15,1))} + \octavec{disp(binom(15,2))}+\octavec{disp(binom(15,3))} = 
+\octavec{disp(binom(15,0) + 
+              binom(15,1) +
+              binom(15,2) + 
+              binom(15,3)
+             )
+        }.
+\]
+So, $C$ cannot be a $3$ error-correcting code because if it were then each of these $\octavec{disp(binom(15,0) + 
+              binom(15,1) +
+              binom(15,2) + 
+              binom(15,3)
+             )
+        }$ vectors would have to lie in a distinct coset (See solution to 12.1\marginnote{Block \textbf{3} Solutions to Unit 12 p85.}). This is impossible as the total number of cosets is $\sage{2^6}$ which is considerably less than $ \octavec{disp(binom(15,0) + 
+              binom(15,1) +
+              binom(15,2) + 
+              binom(15,3)
+             )
+        }$ required for $C$ to be a 3 error-correcting code.

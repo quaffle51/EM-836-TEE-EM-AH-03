@@ -1,0 +1,13 @@
+LIB "redcgs.lib";
+ring R=2,x,dp;
+poly f = x15-1;
+
+poly h = 1 + x + x^4 + x^5 + x^6 + x^9;
+
+printf("===========================\n");
+int k = 5;
+poly r = x^k + x^(k+1);
+poly g = 1 + x + x2 + x3 + x6;
+printf("The received vector is: %s",r);
+pdivi(r,g);
+

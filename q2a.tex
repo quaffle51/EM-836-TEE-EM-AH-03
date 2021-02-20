@@ -1,1 +1,28 @@
 % !TeX root = ./TMA03.tex
+Supposing that $C$ is a perfect binary $(n,M,5)$-code it can be proved that $n^2+n+2$ is necessarily of the form $2^m$, where $m$ is an integer, and that if $C$ is non-trivial (i.e. if $n>5$), then $m>5$ in the following way.
+
+From \hth{2.16}{20} a $q$-ary $(n, M, 2t+1)$-code satisfies
+\begin{equation}
+	\label{eq:bound}
+	M\left(\binom{n}{0} + \binom{n}{1}(q-1) + \ldots + \binom{n}{t}(q-1)^t\right) \leq q^n.
+\end{equation}
+Now as the code under consideration is \textit{perfect} the code achieves the sphere-packing bound such that equality occurs in \ref{eq:bound}. For the case of the given binary code $q=2$ and $2t+1=5$ so that $t=2$. Thus, \eqref{eq:bound} becomes\marginnote{\hill p97.}
+\begin{align*},\\
+	2^n =&M\left(1 + n + \frac{n(n-1)}{2}\right),\\
+	=&M\left(1 + n + \frac{n(n-1)}{2}\right),\\
+	=&M\left(1 + n + \frac{n^2}{2}- \frac{n}{2}\right),\\
+	=&M\left(1 + \frac{n}{2} + \frac{n^2}{2} \right).
+\end{align*}
+Then, multiplying both sides of the last expression by $2$ gives
+\begin{align}
+\label{eq:M}
+	2^{n+1} &= 2M\left(1 + \frac{n}{2} + \frac{n^2}{2} \right),\nonumber\\
+	&= M\left(n^2 +n +2\right).
+\end{align}
+Now,
+\[
+	\log_2(2^{n+1})=n+1 = \log_2(M) + \log_2(n^2+n+2),\;n>5 \text{ if $C$ is nontrival}.
+\]
+Hence, both $M$ and $n^2+n+2$ are positive integer powers of $2$ and as such $n^2+n+2$ is necessarily of the form $2^m$ where $m$ is a positive integer.
+
+Let $n=5$ then $2^m=5^2+5+2 = 32=2^5$ and so when $n>5$ then $m>5$ also.

@@ -1,1 +1,32 @@
 % !TeX root = ./TMA03.tex
+\begin{octavecode}
+function f = binom(n, k);
+  f = int64(factorial(n)/(factorial(n-k)*factorial(k)));
+endfunction
+\end{octavecode}
+\begin{octavecode}
+n = 90;
+d = 5;
+k = 73;
+q = 2;
+\end{octavecode}
+To prove that there is a binary linear $(90, 2^{73},5)$-code, that is a $[90, 73, 5]$-code, use will be made of \hth{8.10}{91} as follows.
+
+From this theorem which assumes that $q$ is a prime power, then there exists a $q$-ary $[n,k]$-code with minimum distance at least $d$ provided the following inequality holds:
+\begin{align*}
+	\sum_{i=0}^{d-2}(q-1)^{i}\binom{n-1}{i} < q^{n-k}.
+\end{align*}
+For the code under consideration $q=\octavec{disp(q)}$ (a prime power), $n=\octavec{disp(n)}$, $k=\octavec{disp(k)}$ and $d=\octavec{disp(d)}$, therefore
+\begin{align*}
+	\sum_{i=0}^{\octavec{disp(d)}-2}(\octavec{disp(q)}-1)^{i}\binom{\octavec{disp(n)}-1}{i} &< 2^{\octavec{disp(n)}-\octavec{disp(k)}},\\
+	\sum_{i=0}^{\octavec{disp(d-2)}}(1)^{i}\binom{\octavec{disp(n-1)}}{i} &< 2^{\octavec{disp(n-k)}},\\
+	\octavec{disp(binom(n-1,0))} + \octavec{disp(binom(n-1,1))} + \octavec{disp(binom(n-1,2))} + \octavec{disp(binom(n-1,3))} = 
+	\octavec{disp( binom(n-1,0) + 
+	               binom(n-1,1) + 
+	               binom(n-1,2) + 
+	               binom(n-1,3)
+	              )
+	        } &< \octavec{disp(2^(n-k))} = 2^{\octavec{disp(n-k)}},
+\end{align*}
+showing that there is a binary linear $(90, 2^{73}, 5)$-code.
+

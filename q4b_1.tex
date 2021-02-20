@@ -1,1 +1,68 @@
 % !TeX root = ./TMA03.tex
+\begin{octavecode}
+function [cols f_frame] = H;  
+  c1 = [1 1 0 0 1 1 0];
+  c2 = [1 0 0 1 1 0 0];
+  c3 = [0 0 1 0 1 1 0];
+  c4 = [0 1 1 1 1 0 0];
+  c5 = [1 1 1 1 1 1 1];
+  c6 = [0 0 0 1 1 1 1];
+  c = [c1;c2;c3;c4;c5;c6];
+  cols = [];
+  for i = 1:size(c1,2)
+    col = [];
+    for j = 1:6
+      col = [col c(j,i)];
+    endfor
+    cols = [cols; col];
+  endfor
+
+  
+  f_frame = [];
+  f_frame = [f_frame; zeros(1, 0) cols(1,:) zeros(1,12)];
+  f_frame = [f_frame; zeros(1, 2) cols(2,:) zeros(1,10)];
+  f_frame = [f_frame; zeros(1, 4) cols(3,:) zeros(1, 8)];
+  f_frame = [f_frame; zeros(1, 6) cols(4,:) zeros(1, 6)];
+  f_frame = [f_frame; zeros(1, 8) cols(5,:) zeros(1, 4)];
+  f_frame = [f_frame; zeros(1,10) cols(6,:) zeros(1, 2)];
+  f_frame = [f_frame; zeros(1,12) cols(7,:) zeros(1, 0)]; 
+endfunction
+
+[cols f_frame] = H;
+\end{octavecode}
+Using 2-frame interleaving we generate the following array from the six codewords $\bm{c_1}, \bm{c_2},\ldots,\bm{c_6}$.
+\[
+\begin{array}{cccccccccccccccccc}
+1 &1 &0 &0 &1 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 \\
+0 &0 &1 &0 &0 &1 &1 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 \\
+0 &0 &0 &0 &0 &0 &1 &1 &1 &0 &0 &0 &0 &0 &0 &0 &0 &0 \\
+0 &0 &0 &0 &0 &0 &0 &1 &0 &1 &1 &1 &0 &0 &0 &0 &0 &0 \\
+0 &0 &0 &0 &0 &0 &0 &0 &1 &1 &1 &1 &1 &1 &0 &0 &0 &0 \\
+0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &1 &0 &1 &0 &1 &1 &0 &0 \\
+0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 &1 &1 \\
+\end{array} 
+\]
+The first row of the array contains all the first coordinate position bits; the second row contains all the second coordinate bits, and so on. The number of rows is the length of a codeword (i.e. $n=7$). The offset of each row from the previous row is $2$ (i.e. $f=2$). The bits are transmitted column by column, so that the transmitted vector in this case will be:
+\begin{align*}
+&\octavec{disp(f_frame(:,1)')}\thinspace
+ \octavec{disp(f_frame(:,2)')}\thinspace
+ \octavec{disp(f_frame(:,3)')}\thinspace
+ \octavec{disp(f_frame(:,4)')}\thinspace
+ \octavec{disp(f_frame(:,5)')}\thinspace
+ \octavec{disp(f_frame(:,6)')}\thinspace
+ \octavec{disp(f_frame(:,7)')}\thinspace
+ \octavec{disp(f_frame(:,8)')}\thinspace
+ \octavec{disp(f_frame(:,9)')}\\
+&\octavec{disp(f_frame(:,10)')}\thinspace
+ \octavec{disp(f_frame(:,11)')}\thinspace
+ \octavec{disp(f_frame(:,12)')}\thinspace
+ \octavec{disp(f_frame(:,13)')}\thinspace
+ \octavec{disp(f_frame(:,14)')}\thinspace
+ \octavec{disp(f_frame(:,15)')}\thinspace
+ \octavec{disp(f_frame(:,16)')}\thinspace
+ \octavec{disp(f_frame(:,17)')}\thinspace
+ \octavec{disp(f_frame(:,18)')}
+\end{align*}
+where spaces have again been added for clarity.
+
+$D$ is a $1$ burst error-correcting code. When $D$ is $2$-frame interleaved bursts of length at most $l(fn+1) = 1\times(2\times 7+1)=\sage{1*(2*7+1)}$ will be corrected (see \bth{12.4}{3}{43}). This is provided that each codeword is affected by at most one burst error and by no other errors.

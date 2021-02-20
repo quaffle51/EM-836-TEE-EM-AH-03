@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.10)  18 JAN 2021 10:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.10)  20 FEB 2021 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1234,58 +1234,476 @@ Package marginnote Info: xpos seems to be 410.14699pt on input line 52.
 [4] [5]
 \openout2 = `q2.aux'.
 
- (./q2.tex (./q2a.tex) (./q2b.tex) (./q2c.tex) (./q2d.tex)) [6
+ (./q2.tex (./q2a.tex
+Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 4.
+
+Package marginnote Info: right page because not two side mode on input line 4.
+Package marginnote Info: xpos seems to be 201.31042pt on input line 4.
+Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 10
+.
+Package marginnote Info: right page because not two side mode on input line 10.
+
+Package marginnote Info: xpos seems to be 441.54843pt on input line 10.
+) (./q2b.tex
+Package marginnote Info: Margin note 6.3 is on absolute page 6 on input line 8.
+
+Package marginnote Info: right page because not two side mode on input line 8.
+Package marginnote Info: xpos seems to be 280.71736pt on input line 8.
+ [6
 
 
 
 ]
+<q2b.png, id=37, 529.03697pt x 537.00983pt>
+File: q2b.png Graphic file (type png)
+<use q2b.png>
+Package pdftex.def Info: q2b.png  used on input line 35.
+(pdftex.def)             Requested size: 302.7385pt x 307.30331pt.
+) [7 <./q2b.png>] (./q2c.tex
+Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 27
+.
+Package marginnote Info: right page because not two side mode on input line 27.
+
+Package marginnote Info: xpos seems to be 401.34282pt on input line 27.
+
+[8]) (./q2d.tex
+\c@pytx@octave@default@0=\count398
+\c@pytx@octave@default@0@line=\count399
+Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 13
+.
+Package marginnote Info: right page because not two side mode on input line 13.
+
+Package marginnote Info: xpos seems to be 304.83856pt on input line 13.
+ [9] (./pythontex-files-TMA03/octave_default_0_2.stdout)
+(./pythontex-files-TMA03/octave_default_0_3.stdout)
+(./pythontex-files-TMA03/octave_default_0_4.stdout)
+(./pythontex-files-TMA03/octave_default_0_5.stdout)
+(./pythontex-files-TMA03/octave_default_0_6.stdout)
+(./pythontex-files-TMA03/octave_default_0_7.stdout)
+(./pythontex-files-TMA03/octave_default_0_8.stdout)
+(./pythontex-files-TMA03/octave_default_0_9.stdout)
+(./pythontex-files-TMA03/octave_default_0_10.stdout)
+(./pythontex-files-TMA03/octave_default_0_11.stdout)
+(./pythontex-files-TMA03/octave_default_0_12.stdout)
+(./pythontex-files-TMA03/octave_default_0_13.stdout)
+(./pythontex-files-TMA03/octave_default_0_14.stdout)
+(./pythontex-files-TMA03/octave_default_0_15.stdout)
+(./pythontex-files-TMA03/octave_default_0_16.stdout)
+(./pythontex-files-TMA03/octave_default_0_17.stdout)
+(./pythontex-files-TMA03/octave_default_0_18.stdout)
+(./pythontex-files-TMA03/octave_default_0_19.stdout)
+(./pythontex-files-TMA03/octave_default_0_20.stdout)
+(./pythontex-files-TMA03/octave_default_0_6.stdout)
+(./pythontex-files-TMA03/octave_default_0_7.stdout)
+(./pythontex-files-TMA03/octave_default_0_8.stdout)
+(./pythontex-files-TMA03/octave_default_0_9.stdout)
+(./pythontex-files-TMA03/octave_default_0_10.stdout)
+(./pythontex-files-TMA03/octave_default_0_11.stdout)
+(./pythontex-files-TMA03/octave_default_0_12.stdout)
+(./pythontex-files-TMA03/octave_default_0_13.stdout)
+(./pythontex-files-TMA03/octave_default_0_14.stdout)
+(./pythontex-files-TMA03/octave_default_0_15.stdout)
+(./pythontex-files-TMA03/octave_default_0_16.stdout)
+(./pythontex-files-TMA03/octave_default_0_17.stdout)
+(./pythontex-files-TMA03/octave_default_0_18.stdout)
+(./pythontex-files-TMA03/octave_default_0_19.stdout)
+(./pythontex-files-TMA03/octave_default_0_20.stdout))) [10]
 \openout2 = `q3.aux'.
 
-
-(./q3.tex (./q3a.tex) (./q3b.tex) (./q3c.tex) (./q3d.tex)) [7
+ (./q3.tex
+(./q3a.tex
+Package marginnote Info: Margin note 11.1 is on absolute page 11 on input line 
+2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package marginnote Info: xpos seems to be 201.57565pt on input line 2.
+) (./q3b.tex
+Package marginnote Info: Margin note 11.2 is on absolute page 11 on input line 
+2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package marginnote Info: xpos seems to be 193.16666pt on input line 2.
+ [11
 
 
 
 ]
+Package marginnote Info: Margin note 12.1 is on absolute page 12 on input line 
+6.
+Package marginnote Info: right page because not two side mode on input line 6.
+Package marginnote Info: xpos seems to be 225.58743pt on input line 6.
+Package marginnote Info: Margin note 12.2 is on absolute page 13 on input line 
+35.
+Package marginnote Info: right page because not two side mode on input line 35.
+
+Package marginnote Info: xpos seems to be 339.19113pt on input line 35.
+ [12]) (./q3c.tex
+Package marginnote Info: Margin note 13.1 is on absolute page 13 on input line 
+2.
+Package marginnote Info: right page because not two side mode on input line 2.
+Package marginnote Info: xpos seems to be 194.56207pt on input line 2.
+Package marginnote Info: Margin note 13.2 is on absolute page 13 on input line 
+19.
+Package marginnote Info: right page because not two side mode on input line 19.
+
+Package marginnote Info: xpos seems to be 327.2742pt on input line 19.
+Package marginnote Info: Margin note 13.3 is on absolute page 13 on input line 
+24.
+Package marginnote Info: right page because not two side mode on input line 24.
+
+Package marginnote Info: xpos seems to be 219.31541pt on input line 24.
+
+Overfull \hbox (55.74715pt too wide) detected at line 45
+[]
+ []
+
+[13]
+Overfull \hbox (81.7982pt too wide) detected at line 51
+[]
+ []
+
+) (./q3d.tex
+Package marginnote Info: Margin note 14.1 is on absolute page 14 on input line 
+8.
+Package marginnote Info: right page because not two side mode on input line 8.
+Package marginnote Info: xpos seems to be 360.64537pt on input line 8.
+
+Overfull \hbox (55.43164pt too wide) detected at line 11
+\OT1/cmr/m/n/12 140 [][]\OML/cmm/m/it/12 p[] \OT1/cmr/m/n/12 + 448 [][]\OML/cmm
+/m/it/12 p[] \OT1/cmr/m/n/12 + 870 [][]\OML/cmm/m/it/12 p[] \OT1/cmr/m/n/12 + 4
+48 [][]\OML/cmm/m/it/12 p[] \OT1/cmr/m/n/12 + 140 [][]\OML/cmm/m/it/12 p[] \OT1
+/cmr/m/n/12 + \OML/cmm/m/it/12 p[]:
+ []
+
+)) [14]
 \openout2 = `q4.aux'.
 
- (./q4.tex
-(./q4a.tex) (./q4b.tex (./q4b_0.tex) (./q4b_1.tex)) (./q4c.tex)) [8
+ (./q4.tex (./q4a.tex
+Package marginnote Info: Margin note 15.1 is on absolute page 15 on input line 
+14.
+Package marginnote Info: right page because not two side mode on input line 14.
+
+Package marginnote Info: xpos seems to be 209.15273pt on input line 14.
+Package marginnote Info: Margin note 15.2 is on absolute page 15 on input line 
+46.
+Package marginnote Info: right page because not two side mode on input line 46.
+
+Package marginnote Info: xpos seems to be 373.17381pt on input line 46.
+
+(./pythontex-files-TMA03/octave_default_0_22.stdout) [15
 
 
 
 ]
+Package marginnote Info: Margin note 16.1 is on absolute page 16 on input line 
+104.
+Package marginnote Info: right page because not two side mode on input line 104
+.
+Package marginnote Info: xpos seems to be 391.95825pt on input line 104.
+Package marginnote Info: Margin note 16.2 is on absolute page 16 on input line 
+105.
+Package marginnote Info: right page because not two side mode on input line 105
+.
+Package marginnote Info: xpos seems to be 282.24861pt on input line 105.
+
+(./pythontex-files-TMA03/octave_default_0_23.stdout)
+(./pythontex-files-TMA03/octave_default_0_24.stdout)
+(./pythontex-files-TMA03/octave_default_0_25.stdout)
+(./pythontex-files-TMA03/octave_default_0_26.stdout)
+(./pythontex-files-TMA03/octave_default_0_27.stdout) [16]
+(./pythontex-files-TMA03/octave_default_0_28.stdout)
+Package marginnote Info: Margin note 17.1 is on absolute page 17 on input line 
+120.
+Package marginnote Info: right page because not two side mode on input line 120
+.
+Package marginnote Info: xpos seems to be 458.38412pt on input line 120.
+
+(./pythontex-files-TMA03/octave_default_0_29.stdout)) (./q4b.tex (./q4b_0.tex
+(./pythontex-files-TMA03/octave_default_0_31.stdout)
+(./pythontex-files-TMA03/octave_default_0_32.stdout)
+(./pythontex-files-TMA03/octave_default_0_33.stdout)
+(./pythontex-files-TMA03/octave_default_0_34.stdout)
+(./pythontex-files-TMA03/octave_default_0_35.stdout)
+(./pythontex-files-TMA03/octave_default_0_36.stdout)
+(./pythontex-files-TMA03/octave_default_0_31.stdout)
+(./pythontex-files-TMA03/octave_default_0_32.stdout)
+(./pythontex-files-TMA03/octave_default_0_33.stdout)
+(./pythontex-files-TMA03/octave_default_0_34.stdout)
+(./pythontex-files-TMA03/octave_default_0_35.stdout)
+(./pythontex-files-TMA03/octave_default_0_36.stdout)
+(./pythontex-files-TMA03/octave_default_0_37.stdout)
+(./pythontex-files-TMA03/octave_default_0_38.stdout)
+(./pythontex-files-TMA03/octave_default_0_39.stdout)
+(./pythontex-files-TMA03/octave_default_0_40.stdout)
+(./pythontex-files-TMA03/octave_default_0_41.stdout)
+(./pythontex-files-TMA03/octave_default_0_42.stdout)
+(./pythontex-files-TMA03/octave_default_0_43.stdout)
+(./pythontex-files-TMA03/octave_default_0_44.stdout)
+(./pythontex-files-TMA03/octave_default_0_45.stdout)
+(./pythontex-files-TMA03/octave_default_0_46.stdout)
+(./pythontex-files-TMA03/octave_default_0_47.stdout)
+(./pythontex-files-TMA03/octave_default_0_48.stdout)
+(./pythontex-files-TMA03/octave_default_0_49.stdout)
+(./pythontex-files-TMA03/octave_default_0_50.stdout)
+Package marginnote Info: Margin note 17.2 is on absolute page 17 on input line 
+26.
+Package marginnote Info: right page because not two side mode on input line 26.
+
+Package marginnote Info: xpos seems to be 201.48824pt on input line 26.
+Package marginnote Info: Margin note 17.3 is on absolute page 17 on input line 
+27.
+Package marginnote Info: right page because not two side mode on input line 27.
+
+Package marginnote Info: xpos seems to be 313.66814pt on input line 27.
+) (./q4b_1.tex
+(./pythontex-files-TMA03/octave_default_0_52.stdout)
+(./pythontex-files-TMA03/octave_default_0_53.stdout)
+(./pythontex-files-TMA03/octave_default_0_54.stdout)
+(./pythontex-files-TMA03/octave_default_0_55.stdout)
+(./pythontex-files-TMA03/octave_default_0_56.stdout)
+(./pythontex-files-TMA03/octave_default_0_57.stdout)
+(./pythontex-files-TMA03/octave_default_0_58.stdout)
+(./pythontex-files-TMA03/octave_default_0_59.stdout)
+(./pythontex-files-TMA03/octave_default_0_60.stdout)
+(./pythontex-files-TMA03/octave_default_0_61.stdout)
+(./pythontex-files-TMA03/octave_default_0_62.stdout)
+(./pythontex-files-TMA03/octave_default_0_63.stdout)
+(./pythontex-files-TMA03/octave_default_0_64.stdout)
+(./pythontex-files-TMA03/octave_default_0_65.stdout)
+(./pythontex-files-TMA03/octave_default_0_66.stdout)
+(./pythontex-files-TMA03/octave_default_0_67.stdout)
+(./pythontex-files-TMA03/octave_default_0_68.stdout)
+(./pythontex-files-TMA03/octave_default_0_69.stdout)
+(./pythontex-files-TMA03/octave_default_0_52.stdout)
+(./pythontex-files-TMA03/octave_default_0_53.stdout)
+(./pythontex-files-TMA03/octave_default_0_54.stdout)
+(./pythontex-files-TMA03/octave_default_0_55.stdout)
+(./pythontex-files-TMA03/octave_default_0_56.stdout)
+(./pythontex-files-TMA03/octave_default_0_57.stdout)
+(./pythontex-files-TMA03/octave_default_0_58.stdout)
+(./pythontex-files-TMA03/octave_default_0_59.stdout)
+(./pythontex-files-TMA03/octave_default_0_60.stdout)
+(./pythontex-files-TMA03/octave_default_0_61.stdout)
+(./pythontex-files-TMA03/octave_default_0_62.stdout)
+(./pythontex-files-TMA03/octave_default_0_63.stdout)
+(./pythontex-files-TMA03/octave_default_0_64.stdout)
+(./pythontex-files-TMA03/octave_default_0_65.stdout)
+(./pythontex-files-TMA03/octave_default_0_66.stdout)
+(./pythontex-files-TMA03/octave_default_0_67.stdout)
+(./pythontex-files-TMA03/octave_default_0_68.stdout)
+(./pythontex-files-TMA03/octave_default_0_69.stdout)
+Overfull \hbox (7.69922pt too wide) detected at line 65
+[]
+ []
+
+[17]
+Package marginnote Info: Margin note 18.1 is on absolute page 18 on input line 
+68.
+Package marginnote Info: right page because not two side mode on input line 68.
+
+Package marginnote Info: xpos seems to be 166.70294pt on input line 68.
+)) (./q4c.tex (./pythontex-files-TMA03/octave_default_0_72.stdout)
+(./pythontex-files-TMA03/octave_default_0_73.stdout)
+(./pythontex-files-TMA03/octave_default_0_74.stdout)
+(./pythontex-files-TMA03/octave_default_0_75.stdout)
+(./pythontex-files-TMA03/octave_default_0_76.stdout)
+(./pythontex-files-TMA03/octave_default_0_77.stdout)
+(./pythontex-files-TMA03/octave_default_0_78.stdout)
+(./pythontex-files-TMA03/octave_default_0_79.stdout)
+(./pythontex-files-TMA03/octave_default_0_80.stdout)
+(./pythontex-files-TMA03/octave_default_0_81.stdout)
+(./pythontex-files-TMA03/octave_default_0_82.stdout)
+(./pythontex-files-TMA03/octave_default_0_83.stdout)
+(./pythontex-files-TMA03/octave_default_0_84.stdout)
+(./pythontex-files-TMA03/octave_default_0_85.stdout)
+(./pythontex-files-TMA03/octave_default_0_86.stdout)
+(./pythontex-files-TMA03/octave_default_0_87.stdout)
+(./pythontex-files-TMA03/octave_default_0_88.stdout)
+(./pythontex-files-TMA03/octave_default_0_89.stdout)
+(./pythontex-files-TMA03/octave_default_0_90.stdout)
+(./pythontex-files-TMA03/octave_default_0_91.stdout)
+(./pythontex-files-TMA03/octave_default_0_92.stdout)
+(./pythontex-files-TMA03/octave_default_0_93.stdout)
+(./pythontex-files-TMA03/octave_default_0_94.stdout)
+(./pythontex-files-TMA03/octave_default_0_95.stdout)
+(./pythontex-files-TMA03/octave_default_0_96.stdout)
+(./pythontex-files-TMA03/octave_default_0_97.stdout)
+(./pythontex-files-TMA03/octave_default_0_98.stdout)
+(./pythontex-files-TMA03/octave_default_0_99.stdout)
+(./pythontex-files-TMA03/octave_default_0_100.stdout)
+(./pythontex-files-TMA03/octave_default_0_101.stdout)
+(./pythontex-files-TMA03/octave_default_0_102.stdout)
+(./pythontex-files-TMA03/octave_default_0_103.stdout)
+(./pythontex-files-TMA03/octave_default_0_104.stdout)
+(./pythontex-files-TMA03/octave_default_0_105.stdout)
+(./pythontex-files-TMA03/octave_default_0_106.stdout)
+(./pythontex-files-TMA03/octave_default_0_107.stdout)
+(./pythontex-files-TMA03/octave_default_0_108.stdout)
+(./pythontex-files-TMA03/octave_default_0_109.stdout)
+(./pythontex-files-TMA03/octave_default_0_110.stdout)
+(./pythontex-files-TMA03/octave_default_0_111.stdout)
+(./pythontex-files-TMA03/octave_default_0_72.stdout)
+(./pythontex-files-TMA03/octave_default_0_73.stdout)
+(./pythontex-files-TMA03/octave_default_0_74.stdout)
+(./pythontex-files-TMA03/octave_default_0_75.stdout)
+(./pythontex-files-TMA03/octave_default_0_76.stdout)
+(./pythontex-files-TMA03/octave_default_0_77.stdout)
+(./pythontex-files-TMA03/octave_default_0_78.stdout)
+(./pythontex-files-TMA03/octave_default_0_79.stdout)
+(./pythontex-files-TMA03/octave_default_0_80.stdout)
+(./pythontex-files-TMA03/octave_default_0_81.stdout)
+(./pythontex-files-TMA03/octave_default_0_82.stdout)
+(./pythontex-files-TMA03/octave_default_0_83.stdout)
+(./pythontex-files-TMA03/octave_default_0_84.stdout)
+(./pythontex-files-TMA03/octave_default_0_85.stdout)
+(./pythontex-files-TMA03/octave_default_0_86.stdout)
+(./pythontex-files-TMA03/octave_default_0_87.stdout)
+(./pythontex-files-TMA03/octave_default_0_88.stdout)
+(./pythontex-files-TMA03/octave_default_0_89.stdout)
+(./pythontex-files-TMA03/octave_default_0_90.stdout)
+(./pythontex-files-TMA03/octave_default_0_91.stdout)
+(./pythontex-files-TMA03/octave_default_0_92.stdout)
+(./pythontex-files-TMA03/octave_default_0_93.stdout)
+(./pythontex-files-TMA03/octave_default_0_94.stdout)
+(./pythontex-files-TMA03/octave_default_0_95.stdout)
+(./pythontex-files-TMA03/octave_default_0_96.stdout)
+(./pythontex-files-TMA03/octave_default_0_97.stdout)
+(./pythontex-files-TMA03/octave_default_0_98.stdout)
+(./pythontex-files-TMA03/octave_default_0_99.stdout)
+(./pythontex-files-TMA03/octave_default_0_100.stdout)
+(./pythontex-files-TMA03/octave_default_0_101.stdout)
+(./pythontex-files-TMA03/octave_default_0_102.stdout)
+(./pythontex-files-TMA03/octave_default_0_103.stdout)
+(./pythontex-files-TMA03/octave_default_0_104.stdout)
+(./pythontex-files-TMA03/octave_default_0_105.stdout)
+(./pythontex-files-TMA03/octave_default_0_106.stdout)
+(./pythontex-files-TMA03/octave_default_0_107.stdout)
+(./pythontex-files-TMA03/octave_default_0_108.stdout)
+(./pythontex-files-TMA03/octave_default_0_109.stdout)
+(./pythontex-files-TMA03/octave_default_0_110.stdout)
+(./pythontex-files-TMA03/octave_default_0_111.stdout)
+(./pythontex-files-TMA03/octave_default_0_112.stdout)
+(./pythontex-files-TMA03/octave_default_0_113.stdout)
+(./pythontex-files-TMA03/octave_default_0_114.stdout)
+(./pythontex-files-TMA03/octave_default_0_115.stdout)
+(./pythontex-files-TMA03/octave_default_0_116.stdout)
+(./pythontex-files-TMA03/octave_default_0_117.stdout)
+(./pythontex-files-TMA03/octave_default_0_118.stdout)
+(./pythontex-files-TMA03/octave_default_0_119.stdout)
+(./pythontex-files-TMA03/octave_default_0_120.stdout)
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 239.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 239.
+
+(./pythontex-files-TMA03/octave_default_0_121.stdout)
+(./pythontex-files-TMA03/octave_default_0_122.stdout)
+(./pythontex-files-TMA03/octave_default_0_123.stdout)
+(./pythontex-files-TMA03/octave_default_0_124.stdout)
+(./pythontex-files-TMA03/octave_default_0_125.stdout)
+(./pythontex-files-TMA03/octave_default_0_126.stdout)
+(./pythontex-files-TMA03/octave_default_0_112.stdout)
+(./pythontex-files-TMA03/octave_default_0_113.stdout)
+(./pythontex-files-TMA03/octave_default_0_114.stdout)
+(./pythontex-files-TMA03/octave_default_0_115.stdout)
+(./pythontex-files-TMA03/octave_default_0_116.stdout)
+(./pythontex-files-TMA03/octave_default_0_117.stdout)
+(./pythontex-files-TMA03/octave_default_0_118.stdout)
+(./pythontex-files-TMA03/octave_default_0_119.stdout)
+(./pythontex-files-TMA03/octave_default_0_120.stdout)
+(./pythontex-files-TMA03/octave_default_0_121.stdout)
+(./pythontex-files-TMA03/octave_default_0_122.stdout)
+(./pythontex-files-TMA03/octave_default_0_123.stdout)
+(./pythontex-files-TMA03/octave_default_0_124.stdout)
+(./pythontex-files-TMA03/octave_default_0_125.stdout)
+(./pythontex-files-TMA03/octave_default_0_126.stdout)
+(./pythontex-files-TMA03/octave_default_0_127.stdout)
+(./pythontex-files-TMA03/octave_default_0_128.stdout)
+(./pythontex-files-TMA03/octave_default_0_129.stdout)
+(./pythontex-files-TMA03/octave_default_0_130.stdout)
+(./pythontex-files-TMA03/octave_default_0_131.stdout)
+(./pythontex-files-TMA03/octave_default_0_132.stdout)
+(./pythontex-files-TMA03/octave_default_0_133.stdout)
+(./pythontex-files-TMA03/octave_default_0_134.stdout)
+(./pythontex-files-TMA03/octave_default_0_135.stdout)
+(./pythontex-files-TMA03/octave_default_0_136.stdout)
+(./pythontex-files-TMA03/octave_default_0_137.stdout)
+(./pythontex-files-TMA03/octave_default_0_138.stdout)
+(./pythontex-files-TMA03/octave_default_0_139.stdout)
+(./pythontex-files-TMA03/octave_default_0_140.stdout)
+(./pythontex-files-TMA03/octave_default_0_141.stdout)
+(./pythontex-files-TMA03/octave_default_0_142.stdout)
+(./pythontex-files-TMA03/octave_default_0_127.stdout)
+(./pythontex-files-TMA03/octave_default_0_128.stdout)
+(./pythontex-files-TMA03/octave_default_0_129.stdout)
+(./pythontex-files-TMA03/octave_default_0_130.stdout)
+(./pythontex-files-TMA03/octave_default_0_131.stdout)
+(./pythontex-files-TMA03/octave_default_0_132.stdout)
+(./pythontex-files-TMA03/octave_default_0_133.stdout)
+(./pythontex-files-TMA03/octave_default_0_134.stdout)
+(./pythontex-files-TMA03/octave_default_0_135.stdout)
+(./pythontex-files-TMA03/octave_default_0_136.stdout)
+(./pythontex-files-TMA03/octave_default_0_137.stdout)
+(./pythontex-files-TMA03/octave_default_0_138.stdout)
+(./pythontex-files-TMA03/octave_default_0_139.stdout)
+(./pythontex-files-TMA03/octave_default_0_140.stdout)
+(./pythontex-files-TMA03/octave_default_0_141.stdout)
+(./pythontex-files-TMA03/octave_default_0_142.stdout) [18]
+(./pythontex-files-TMA03/octave_default_0_143.stdout)
+(./pythontex-files-TMA03/octave_default_0_144.stdout)
+(./pythontex-files-TMA03/octave_default_0_145.stdout)
+(./pythontex-files-TMA03/octave_default_0_146.stdout)
+(./pythontex-files-TMA03/octave_default_0_147.stdout)
+(./pythontex-files-TMA03/octave_default_0_148.stdout)
+(./pythontex-files-TMA03/octave_default_0_149.stdout)
+(./pythontex-files-TMA03/octave_default_0_150.stdout)
+(./pythontex-files-TMA03/octave_default_0_151.stdout)
+(./pythontex-files-TMA03/octave_default_0_152.stdout)
+(./pythontex-files-TMA03/octave_default_0_153.stdout))
+Underfull \hbox (badness 10000) in paragraph at lines 292--9
+
+ []
+
+) [19]
 *********************************************************************
 
 AED: lastpage setting LastPage
 (./TMA03.aux (./q1.aux) (./q2.aux) (./q3.aux) (./q4.aux)) ) 
 Here is how much of TeX's memory you used:
- 25016 strings out of 479917
- 458300 string characters out of 5882705
- 841190 words of memory out of 5000000
- 40866 multiletter control sequences out of 15000+600000
- 551693 words of font info for 109 fonts, out of 8000000 for 9000
+ 25992 strings out of 479917
+ 495930 string characters out of 5882705
+ 855775 words of memory out of 5000000
+ 41112 multiletter control sequences out of 15000+600000
+ 555936 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,118p,1462b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,13n,118p,1462b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/
-2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2020/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/
-fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fo
-nts/type1/public/cm-super/sfti1200.pfb>
-Output written on TMA03.pdf (8 pages, 138564 bytes).
+2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2
+020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/f
+onts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2020/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020/texmf-dist/fonts
+/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
+ype1/public/cm-super/sfti1200.pfb>
+Output written on TMA03.pdf (19 pages, 602789 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 153 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 12301 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 13842 words of extra memory for PDF output out of 14400 (max. 10000000)
 

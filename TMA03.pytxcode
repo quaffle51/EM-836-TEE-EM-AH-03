@@ -1,3 +1,645 @@
+=>PYTHONTEX#octave#default#0#0#code####q2d.tex#2#
+function f = binom(n, k);
+  f = int64(factorial(n)/(factorial(n-k)*factorial(k)));
+endfunction
+=>PYTHONTEX#octave#default#0#1#code####q2d.tex#7#
+n = 90;
+d = 5;
+k = 73;
+q = 2;
+=>PYTHONTEX#octave#default#0#2#c####q2d.tex#19#
+disp(q)
+=>PYTHONTEX#octave#default#0#3#c####q2d.tex#19#
+disp(n)
+=>PYTHONTEX#octave#default#0#4#c####q2d.tex#19#
+disp(k)
+=>PYTHONTEX#octave#default#0#5#c####q2d.tex#19#
+disp(d)
+=>PYTHONTEX#octave#default#0#6#c####q2d.tex#30#
+disp(d)
+=>PYTHONTEX#octave#default#0#7#c####q2d.tex#30#
+disp(q)
+=>PYTHONTEX#octave#default#0#8#c####q2d.tex#30#
+disp(n)
+=>PYTHONTEX#octave#default#0#9#c####q2d.tex#30#
+disp(n)
+=>PYTHONTEX#octave#default#0#10#c####q2d.tex#30#
+disp(k)
+=>PYTHONTEX#octave#default#0#11#c####q2d.tex#30#
+disp(d-2)
+=>PYTHONTEX#octave#default#0#12#c####q2d.tex#30#
+disp(n-1)
+=>PYTHONTEX#octave#default#0#13#c####q2d.tex#30#
+disp(n-k)
+=>PYTHONTEX#octave#default#0#14#c####q2d.tex#30#
+disp(binom(n-1,0))
+=>PYTHONTEX#octave#default#0#15#c####q2d.tex#30#
+disp(binom(n-1,1))
+=>PYTHONTEX#octave#default#0#16#c####q2d.tex#30#
+disp(binom(n-1,2))
+=>PYTHONTEX#octave#default#0#17#c####q2d.tex#30#
+disp(binom(n-1,3))
+=>PYTHONTEX#octave#default#0#18#c####q2d.tex#30#
+disp( binom(n-1,0) + binom(n-1,1) + binom(n-1,2) + binom(n-1,3) ) 
+=>PYTHONTEX#octave#default#0#19#c####q2d.tex#30#
+disp(2^(n-k))
+=>PYTHONTEX#octave#default#0#20#c####q2d.tex#30#
+disp(n-k)
+=>PYTHONTEX#octave#default#0#6#c####q2d.tex#30#
+disp(d)
+=>PYTHONTEX#octave#default#0#7#c####q2d.tex#30#
+disp(q)
+=>PYTHONTEX#octave#default#0#8#c####q2d.tex#30#
+disp(n)
+=>PYTHONTEX#octave#default#0#9#c####q2d.tex#30#
+disp(n)
+=>PYTHONTEX#octave#default#0#10#c####q2d.tex#30#
+disp(k)
+=>PYTHONTEX#octave#default#0#11#c####q2d.tex#30#
+disp(d-2)
+=>PYTHONTEX#octave#default#0#12#c####q2d.tex#30#
+disp(n-1)
+=>PYTHONTEX#octave#default#0#13#c####q2d.tex#30#
+disp(n-k)
+=>PYTHONTEX#octave#default#0#14#c####q2d.tex#30#
+disp(binom(n-1,0))
+=>PYTHONTEX#octave#default#0#15#c####q2d.tex#30#
+disp(binom(n-1,1))
+=>PYTHONTEX#octave#default#0#16#c####q2d.tex#30#
+disp(binom(n-1,2))
+=>PYTHONTEX#octave#default#0#17#c####q2d.tex#30#
+disp(binom(n-1,3))
+=>PYTHONTEX#octave#default#0#18#c####q2d.tex#30#
+disp( binom(n-1,0) + binom(n-1,1) + binom(n-1,2) + binom(n-1,3) ) 
+=>PYTHONTEX#octave#default#0#19#c####q2d.tex#30#
+disp(2^(n-k))
+=>PYTHONTEX#octave#default#0#20#c####q2d.tex#30#
+disp(n-k)
+=>PYTHONTEX#octave#default#0#21#code####q4a.tex#58#
+v = [1 1 0 0 1 1 1 0 0 1 0 0 0 0 0];
+w = flip(w = 2.^[0:14]);
+z = sum(v.*w);
+=>PYTHONTEX#octave#default#0#22#c####q4a.tex#63#
+disp(z)
+=>PYTHONTEX#octave#default#0#23#c####q4a.tex#107#
+disp(binom(15,0))
+=>PYTHONTEX#octave#default#0#24#c####q4a.tex#107#
+disp(binom(15,1))
+=>PYTHONTEX#octave#default#0#25#c####q4a.tex#107#
+disp(binom(15,2))
+=>PYTHONTEX#octave#default#0#26#c####q4a.tex#107#
+disp(binom(15,3))
+=>PYTHONTEX#octave#default#0#27#c####q4a.tex#113#
+disp(binom(15,0) +               binom(15,1) +               binom(15,2) +               binom(15,3)              )         
+=>PYTHONTEX#octave#default#0#28#c####q4a.tex#120#
+disp(binom(15,0) +               binom(15,1) +               binom(15,2) +               binom(15,3)              )         
+=>PYTHONTEX#octave#default#0#29#c####q4a.tex#125#
+disp(binom(15,0) +               binom(15,1) +               binom(15,2) +               binom(15,3)              )         
+=>PYTHONTEX#octave#default#0#30#code####q4b_0.tex#3#
+function [c c1 c2 c3 c4 c5 c6 d e] = F;
+  c1 = [1 1 0 0 1 1 0];
+  c2 = [1 0 0 1 1 0 0];
+  c3 = [0 0 1 0 1 1 0];
+  c4 = [0 1 1 1 1 0 0];
+  c5 = [1 1 1 1 1 1 1];
+  c6 = [0 0 0 1 1 1 1];
+  c = [c1;c2;c3;c4;c5;c6];
+
+  d = [c(1,:);c(2,:); c(3,:)];
+  e = [c(4,:);c(5,:); c(6,:)];
+endfunction
+
+[c c1 c2 c3 c4 c5 c6 d e] = F;
+=>PYTHONTEX#octave#default#0#31#c####q4b_0.tex#23#
+disp(c1)
+=>PYTHONTEX#octave#default#0#32#c####q4b_0.tex#23#
+disp(c4)
+=>PYTHONTEX#octave#default#0#33#c####q4b_0.tex#23#
+disp(c2)
+=>PYTHONTEX#octave#default#0#34#c####q4b_0.tex#23#
+disp(c5)
+=>PYTHONTEX#octave#default#0#35#c####q4b_0.tex#23#
+disp(c3)
+=>PYTHONTEX#octave#default#0#36#c####q4b_0.tex#23#
+disp(c6)
+=>PYTHONTEX#octave#default#0#31#c####q4b_0.tex#23#
+disp(c1)
+=>PYTHONTEX#octave#default#0#32#c####q4b_0.tex#23#
+disp(c4)
+=>PYTHONTEX#octave#default#0#33#c####q4b_0.tex#23#
+disp(c2)
+=>PYTHONTEX#octave#default#0#34#c####q4b_0.tex#23#
+disp(c5)
+=>PYTHONTEX#octave#default#0#35#c####q4b_0.tex#23#
+disp(c3)
+=>PYTHONTEX#octave#default#0#36#c####q4b_0.tex#23#
+disp(c6)
+=>PYTHONTEX#octave#default#0#37#c####q4b_0.tex#24#
+disp(d'(1,:))
+=>PYTHONTEX#octave#default#0#38#c####q4b_0.tex#24#
+disp(d'(2,:))
+=>PYTHONTEX#octave#default#0#39#c####q4b_0.tex#24#
+disp(d'(3,:))
+=>PYTHONTEX#octave#default#0#40#c####q4b_0.tex#24#
+disp(d'(4,:))
+=>PYTHONTEX#octave#default#0#41#c####q4b_0.tex#24#
+disp(d'(5,:))
+=>PYTHONTEX#octave#default#0#42#c####q4b_0.tex#24#
+disp(d'(6,:))
+=>PYTHONTEX#octave#default#0#43#c####q4b_0.tex#24#
+disp(d'(7,:))
+=>PYTHONTEX#octave#default#0#44#c####q4b_0.tex#24#
+disp(e'(1,:))
+=>PYTHONTEX#octave#default#0#45#c####q4b_0.tex#24#
+disp(e'(2,:))
+=>PYTHONTEX#octave#default#0#46#c####q4b_0.tex#24#
+disp(e'(3,:))
+=>PYTHONTEX#octave#default#0#47#c####q4b_0.tex#24#
+disp(e'(4,:))
+=>PYTHONTEX#octave#default#0#48#c####q4b_0.tex#24#
+disp(e'(5,:))
+=>PYTHONTEX#octave#default#0#49#c####q4b_0.tex#24#
+disp(e'(6,:))
+=>PYTHONTEX#octave#default#0#50#c####q4b_0.tex#24#
+disp(e'(7,:))
+=>PYTHONTEX#octave#default#0#51#code####q4b_1.tex#2#
+function [cols f_frame] = H;
+  c1 = [1 1 0 0 1 1 0];
+  c2 = [1 0 0 1 1 0 0];
+  c3 = [0 0 1 0 1 1 0];
+  c4 = [0 1 1 1 1 0 0];
+  c5 = [1 1 1 1 1 1 1];
+  c6 = [0 0 0 1 1 1 1];
+  c = [c1;c2;c3;c4;c5;c6];
+  cols = [];
+  for i = 1:size(c1,2)
+    col = [];
+    for j = 1:6
+      col = [col c(j,i)];
+    endfor
+    cols = [cols; col];
+  endfor
+
+
+  f_frame = [];
+  f_frame = [f_frame; zeros(1, 0) cols(1,:) zeros(1,12)];
+  f_frame = [f_frame; zeros(1, 2) cols(2,:) zeros(1,10)];
+  f_frame = [f_frame; zeros(1, 4) cols(3,:) zeros(1, 8)];
+  f_frame = [f_frame; zeros(1, 6) cols(4,:) zeros(1, 6)];
+  f_frame = [f_frame; zeros(1, 8) cols(5,:) zeros(1, 4)];
+  f_frame = [f_frame; zeros(1,10) cols(6,:) zeros(1, 2)];
+  f_frame = [f_frame; zeros(1,12) cols(7,:) zeros(1, 0)];
+endfunction
+
+[cols f_frame] = H;
+=>PYTHONTEX#octave#default#0#52#c####q4b_1.tex#65#
+disp(f_frame(:,1)')
+=>PYTHONTEX#octave#default#0#53#c####q4b_1.tex#65#
+disp(f_frame(:,2)')
+=>PYTHONTEX#octave#default#0#54#c####q4b_1.tex#65#
+disp(f_frame(:,3)')
+=>PYTHONTEX#octave#default#0#55#c####q4b_1.tex#65#
+disp(f_frame(:,4)')
+=>PYTHONTEX#octave#default#0#56#c####q4b_1.tex#65#
+disp(f_frame(:,5)')
+=>PYTHONTEX#octave#default#0#57#c####q4b_1.tex#65#
+disp(f_frame(:,6)')
+=>PYTHONTEX#octave#default#0#58#c####q4b_1.tex#65#
+disp(f_frame(:,7)')
+=>PYTHONTEX#octave#default#0#59#c####q4b_1.tex#65#
+disp(f_frame(:,8)')
+=>PYTHONTEX#octave#default#0#60#c####q4b_1.tex#65#
+disp(f_frame(:,9)')
+=>PYTHONTEX#octave#default#0#61#c####q4b_1.tex#65#
+disp(f_frame(:,10)')
+=>PYTHONTEX#octave#default#0#62#c####q4b_1.tex#65#
+disp(f_frame(:,11)')
+=>PYTHONTEX#octave#default#0#63#c####q4b_1.tex#65#
+disp(f_frame(:,12)')
+=>PYTHONTEX#octave#default#0#64#c####q4b_1.tex#65#
+disp(f_frame(:,13)')
+=>PYTHONTEX#octave#default#0#65#c####q4b_1.tex#65#
+disp(f_frame(:,14)')
+=>PYTHONTEX#octave#default#0#66#c####q4b_1.tex#65#
+disp(f_frame(:,15)')
+=>PYTHONTEX#octave#default#0#67#c####q4b_1.tex#65#
+disp(f_frame(:,16)')
+=>PYTHONTEX#octave#default#0#68#c####q4b_1.tex#65#
+disp(f_frame(:,17)')
+=>PYTHONTEX#octave#default#0#69#c####q4b_1.tex#65#
+disp(f_frame(:,18)')
+=>PYTHONTEX#octave#default#0#52#c####q4b_1.tex#65#
+disp(f_frame(:,1)')
+=>PYTHONTEX#octave#default#0#53#c####q4b_1.tex#65#
+disp(f_frame(:,2)')
+=>PYTHONTEX#octave#default#0#54#c####q4b_1.tex#65#
+disp(f_frame(:,3)')
+=>PYTHONTEX#octave#default#0#55#c####q4b_1.tex#65#
+disp(f_frame(:,4)')
+=>PYTHONTEX#octave#default#0#56#c####q4b_1.tex#65#
+disp(f_frame(:,5)')
+=>PYTHONTEX#octave#default#0#57#c####q4b_1.tex#65#
+disp(f_frame(:,6)')
+=>PYTHONTEX#octave#default#0#58#c####q4b_1.tex#65#
+disp(f_frame(:,7)')
+=>PYTHONTEX#octave#default#0#59#c####q4b_1.tex#65#
+disp(f_frame(:,8)')
+=>PYTHONTEX#octave#default#0#60#c####q4b_1.tex#65#
+disp(f_frame(:,9)')
+=>PYTHONTEX#octave#default#0#61#c####q4b_1.tex#65#
+disp(f_frame(:,10)')
+=>PYTHONTEX#octave#default#0#62#c####q4b_1.tex#65#
+disp(f_frame(:,11)')
+=>PYTHONTEX#octave#default#0#63#c####q4b_1.tex#65#
+disp(f_frame(:,12)')
+=>PYTHONTEX#octave#default#0#64#c####q4b_1.tex#65#
+disp(f_frame(:,13)')
+=>PYTHONTEX#octave#default#0#65#c####q4b_1.tex#65#
+disp(f_frame(:,14)')
+=>PYTHONTEX#octave#default#0#66#c####q4b_1.tex#65#
+disp(f_frame(:,15)')
+=>PYTHONTEX#octave#default#0#67#c####q4b_1.tex#65#
+disp(f_frame(:,16)')
+=>PYTHONTEX#octave#default#0#68#c####q4b_1.tex#65#
+disp(f_frame(:,17)')
+=>PYTHONTEX#octave#default#0#69#c####q4b_1.tex#65#
+disp(f_frame(:,18)')
+=>PYTHONTEX#octave#default#0#70#code####q4c.tex#39#
+function [c d m] = q4c;
+  G2 = [1 1 1 1 1 1 1 1;
+        0 1 0 1 0 1 0 1;
+        0 0 1 1 0 0 1 1;
+        0 0 0 0 1 1 1 1
+       ];
+
+  G1 = [1 1 1 1 1 1 1];
+
+  m  = [1 0 1 1  0 1 1 0   0 0 0 0];
+  c  = [];
+  d  = [];
+  for i = 1:size(m,2)
+    c = [c; mod(m(1,i).*G1,2)];
+  endfor
+  for i = 1:7
+  	d = [d; mod(c([1:4],i)' * G2,2)];
+  endfor
+  for i = 1:7
+  	d = [d; mod(c([5:8],i)' * G2,2)];
+  endfor
+  for i = 1:7
+  	d = [d; mod(c([9:12],i)' * G2,2)];
+  endfor
+
+endfunction
+[c d m] = q4c;
+=>PYTHONTEX#octave#default#0#71#code####q4c.tex#157#
+function [d C2] = q4c_1;
+  d = [1 1 0 0 0 0 1 1;
+       1 1 0 0 0 0 1 1;
+       1 1 0 0 0 0 1 1;
+
+       1 1 0 0 1 1 0 1;
+       1 1 0 0 1 1 0 1;
+       1 1 0 0 1 1 0 1;
+
+       1 1 0 0 0 0 1 1;
+       0 1 1 0 0 1 1 0;
+       0 1 1 0 0 1 1 0;
+
+       0 1 1 0 0 1 1 0;
+       0 1 1 0 0 1 1 0;
+       0 1 1 0 0 1 1 0;
+
+       0 1 1 0 0 1 1 0;
+       0 1 1 0 0 1 1 0;
+       0 0 0 0 0 0 0 0
+      ];
+
+  G2 = [1 1 1 1 1 1 1 1;
+        0 1 0 1 0 1 0 1;
+        0 0 1 1 0 0 1 1;
+        0 0 0 0 1 1 1 1
+       ];
+
+  C2 = [];
+
+  for i = 0:1
+    for j = 0:1
+      for k = 0:1
+        for l = 0:1
+          C2 = [C2; mod([i j k l]*G2,2)];
+        endfor
+      endfor
+    endfor
+  endfor
+endfunction
+[d C2] = q4c_1;
+=>PYTHONTEX#octave#default#0#72#c####q4c.tex#221#
+disp(d([1:3],:)'(1,:))
+=>PYTHONTEX#octave#default#0#73#c####q4c.tex#221#
+disp(d([1:3],:)'(2,:))
+=>PYTHONTEX#octave#default#0#74#c####q4c.tex#221#
+disp(d([1:3],:)'(3,:))
+=>PYTHONTEX#octave#default#0#75#c####q4c.tex#221#
+disp(d([1:3],:)'(4,:))
+=>PYTHONTEX#octave#default#0#76#c####q4c.tex#221#
+disp(d([1:3],:)'(5,:))
+=>PYTHONTEX#octave#default#0#77#c####q4c.tex#221#
+disp(d([1:3],:)'(6,:))
+=>PYTHONTEX#octave#default#0#78#c####q4c.tex#221#
+disp(d([1:3],:)'(7,:))
+=>PYTHONTEX#octave#default#0#79#c####q4c.tex#221#
+disp(d([1:3],:)'(8,:))
+=>PYTHONTEX#octave#default#0#80#c####q4c.tex#221#
+disp(d([4:6],:)'(1,:))
+=>PYTHONTEX#octave#default#0#81#c####q4c.tex#221#
+disp(d([4:6],:)'(2,:))
+=>PYTHONTEX#octave#default#0#82#c####q4c.tex#221#
+disp(d([4:6],:)'(3,:))
+=>PYTHONTEX#octave#default#0#83#c####q4c.tex#221#
+disp(d([4:6],:)'(4,:))
+=>PYTHONTEX#octave#default#0#84#c####q4c.tex#221#
+disp(d([4:6],:)'(5,:))
+=>PYTHONTEX#octave#default#0#85#c####q4c.tex#221#
+disp(d([4:6],:)'(6,:))
+=>PYTHONTEX#octave#default#0#86#c####q4c.tex#221#
+disp(d([4:6],:)'(7,:))
+=>PYTHONTEX#octave#default#0#87#c####q4c.tex#221#
+disp(d([4:6],:)'(8,:))
+=>PYTHONTEX#octave#default#0#88#c####q4c.tex#221#
+disp(d([7:9],:)'(1,:))
+=>PYTHONTEX#octave#default#0#89#c####q4c.tex#221#
+disp(d([7:9],:)'(2,:))
+=>PYTHONTEX#octave#default#0#90#c####q4c.tex#221#
+disp(d([7:9],:)'(3,:))
+=>PYTHONTEX#octave#default#0#91#c####q4c.tex#221#
+disp(d([7:9],:)'(4,:))
+=>PYTHONTEX#octave#default#0#92#c####q4c.tex#221#
+disp(d([7:9],:)'(5,:))
+=>PYTHONTEX#octave#default#0#93#c####q4c.tex#221#
+disp(d([7:9],:)'(6,:))
+=>PYTHONTEX#octave#default#0#94#c####q4c.tex#221#
+disp(d([7:9],:)'(7,:))
+=>PYTHONTEX#octave#default#0#95#c####q4c.tex#221#
+disp(d([7:9],:)'(8,:))
+=>PYTHONTEX#octave#default#0#96#c####q4c.tex#221#
+disp(d([10:12],:)'(1,:))
+=>PYTHONTEX#octave#default#0#97#c####q4c.tex#221#
+disp(d([10:12],:)'(2,:))
+=>PYTHONTEX#octave#default#0#98#c####q4c.tex#221#
+disp(d([10:12],:)'(3,:))
+=>PYTHONTEX#octave#default#0#99#c####q4c.tex#221#
+disp(d([10:12],:)'(4,:))
+=>PYTHONTEX#octave#default#0#100#c####q4c.tex#221#
+disp(d([10:12],:)'(5,:))
+=>PYTHONTEX#octave#default#0#101#c####q4c.tex#221#
+disp(d([10:12],:)'(6,:))
+=>PYTHONTEX#octave#default#0#102#c####q4c.tex#221#
+disp(d([10:12],:)'(7,:))
+=>PYTHONTEX#octave#default#0#103#c####q4c.tex#221#
+disp(d([10:12],:)'(8,:))
+=>PYTHONTEX#octave#default#0#104#c####q4c.tex#221#
+disp(d([13:15],:)'(1,:))
+=>PYTHONTEX#octave#default#0#105#c####q4c.tex#221#
+disp(d([13:15],:)'(2,:))
+=>PYTHONTEX#octave#default#0#106#c####q4c.tex#221#
+disp(d([13:15],:)'(3,:))
+=>PYTHONTEX#octave#default#0#107#c####q4c.tex#221#
+disp(d([13:15],:)'(4,:))
+=>PYTHONTEX#octave#default#0#108#c####q4c.tex#221#
+disp(d([13:15],:)'(5,:))
+=>PYTHONTEX#octave#default#0#109#c####q4c.tex#221#
+disp(d([13:15],:)'(6,:))
+=>PYTHONTEX#octave#default#0#110#c####q4c.tex#221#
+disp(d([13:15],:)'(7,:))
+=>PYTHONTEX#octave#default#0#111#c####q4c.tex#221#
+disp(d([13:15],:)'(8,:))
+=>PYTHONTEX#octave#default#0#72#c####q4c.tex#221#
+disp(d([1:3],:)'(1,:))
+=>PYTHONTEX#octave#default#0#73#c####q4c.tex#221#
+disp(d([1:3],:)'(2,:))
+=>PYTHONTEX#octave#default#0#74#c####q4c.tex#221#
+disp(d([1:3],:)'(3,:))
+=>PYTHONTEX#octave#default#0#75#c####q4c.tex#221#
+disp(d([1:3],:)'(4,:))
+=>PYTHONTEX#octave#default#0#76#c####q4c.tex#221#
+disp(d([1:3],:)'(5,:))
+=>PYTHONTEX#octave#default#0#77#c####q4c.tex#221#
+disp(d([1:3],:)'(6,:))
+=>PYTHONTEX#octave#default#0#78#c####q4c.tex#221#
+disp(d([1:3],:)'(7,:))
+=>PYTHONTEX#octave#default#0#79#c####q4c.tex#221#
+disp(d([1:3],:)'(8,:))
+=>PYTHONTEX#octave#default#0#80#c####q4c.tex#221#
+disp(d([4:6],:)'(1,:))
+=>PYTHONTEX#octave#default#0#81#c####q4c.tex#221#
+disp(d([4:6],:)'(2,:))
+=>PYTHONTEX#octave#default#0#82#c####q4c.tex#221#
+disp(d([4:6],:)'(3,:))
+=>PYTHONTEX#octave#default#0#83#c####q4c.tex#221#
+disp(d([4:6],:)'(4,:))
+=>PYTHONTEX#octave#default#0#84#c####q4c.tex#221#
+disp(d([4:6],:)'(5,:))
+=>PYTHONTEX#octave#default#0#85#c####q4c.tex#221#
+disp(d([4:6],:)'(6,:))
+=>PYTHONTEX#octave#default#0#86#c####q4c.tex#221#
+disp(d([4:6],:)'(7,:))
+=>PYTHONTEX#octave#default#0#87#c####q4c.tex#221#
+disp(d([4:6],:)'(8,:))
+=>PYTHONTEX#octave#default#0#88#c####q4c.tex#221#
+disp(d([7:9],:)'(1,:))
+=>PYTHONTEX#octave#default#0#89#c####q4c.tex#221#
+disp(d([7:9],:)'(2,:))
+=>PYTHONTEX#octave#default#0#90#c####q4c.tex#221#
+disp(d([7:9],:)'(3,:))
+=>PYTHONTEX#octave#default#0#91#c####q4c.tex#221#
+disp(d([7:9],:)'(4,:))
+=>PYTHONTEX#octave#default#0#92#c####q4c.tex#221#
+disp(d([7:9],:)'(5,:))
+=>PYTHONTEX#octave#default#0#93#c####q4c.tex#221#
+disp(d([7:9],:)'(6,:))
+=>PYTHONTEX#octave#default#0#94#c####q4c.tex#221#
+disp(d([7:9],:)'(7,:))
+=>PYTHONTEX#octave#default#0#95#c####q4c.tex#221#
+disp(d([7:9],:)'(8,:))
+=>PYTHONTEX#octave#default#0#96#c####q4c.tex#221#
+disp(d([10:12],:)'(1,:))
+=>PYTHONTEX#octave#default#0#97#c####q4c.tex#221#
+disp(d([10:12],:)'(2,:))
+=>PYTHONTEX#octave#default#0#98#c####q4c.tex#221#
+disp(d([10:12],:)'(3,:))
+=>PYTHONTEX#octave#default#0#99#c####q4c.tex#221#
+disp(d([10:12],:)'(4,:))
+=>PYTHONTEX#octave#default#0#100#c####q4c.tex#221#
+disp(d([10:12],:)'(5,:))
+=>PYTHONTEX#octave#default#0#101#c####q4c.tex#221#
+disp(d([10:12],:)'(6,:))
+=>PYTHONTEX#octave#default#0#102#c####q4c.tex#221#
+disp(d([10:12],:)'(7,:))
+=>PYTHONTEX#octave#default#0#103#c####q4c.tex#221#
+disp(d([10:12],:)'(8,:))
+=>PYTHONTEX#octave#default#0#104#c####q4c.tex#221#
+disp(d([13:15],:)'(1,:))
+=>PYTHONTEX#octave#default#0#105#c####q4c.tex#221#
+disp(d([13:15],:)'(2,:))
+=>PYTHONTEX#octave#default#0#106#c####q4c.tex#221#
+disp(d([13:15],:)'(3,:))
+=>PYTHONTEX#octave#default#0#107#c####q4c.tex#221#
+disp(d([13:15],:)'(4,:))
+=>PYTHONTEX#octave#default#0#108#c####q4c.tex#221#
+disp(d([13:15],:)'(5,:))
+=>PYTHONTEX#octave#default#0#109#c####q4c.tex#221#
+disp(d([13:15],:)'(6,:))
+=>PYTHONTEX#octave#default#0#110#c####q4c.tex#221#
+disp(d([13:15],:)'(7,:))
+=>PYTHONTEX#octave#default#0#111#c####q4c.tex#221#
+disp(d([13:15],:)'(8,:))
+=>PYTHONTEX#octave#default#0#112#c####q4c.tex#239#
+disp(d(1,:))
+=>PYTHONTEX#octave#default#0#113#c####q4c.tex#239#
+disp(d(2,:))
+=>PYTHONTEX#octave#default#0#114#c####q4c.tex#239#
+disp(d(3,:))
+=>PYTHONTEX#octave#default#0#115#c####q4c.tex#239#
+disp(d(4,:))
+=>PYTHONTEX#octave#default#0#116#c####q4c.tex#239#
+disp(d(5,:))
+=>PYTHONTEX#octave#default#0#117#c####q4c.tex#239#
+disp(d(6,:))
+=>PYTHONTEX#octave#default#0#118#c####q4c.tex#239#
+disp(d(7,:))
+=>PYTHONTEX#octave#default#0#119#c####q4c.tex#239#
+disp(d(8,:))
+=>PYTHONTEX#octave#default#0#120#c####q4c.tex#239#
+disp(d(9,:))
+=>PYTHONTEX#octave#default#0#121#c####q4c.tex#239#
+disp(d(10,:))
+=>PYTHONTEX#octave#default#0#122#c####q4c.tex#239#
+disp(d(11,:))
+=>PYTHONTEX#octave#default#0#123#c####q4c.tex#239#
+disp(d(12,:))
+=>PYTHONTEX#octave#default#0#124#c####q4c.tex#239#
+disp(d(13,:))
+=>PYTHONTEX#octave#default#0#125#c####q4c.tex#239#
+disp(d(14,:))
+=>PYTHONTEX#octave#default#0#126#c####q4c.tex#239#
+disp(d(15,:))
+=>PYTHONTEX#octave#default#0#112#c####q4c.tex#239#
+disp(d(1,:))
+=>PYTHONTEX#octave#default#0#113#c####q4c.tex#239#
+disp(d(2,:))
+=>PYTHONTEX#octave#default#0#114#c####q4c.tex#239#
+disp(d(3,:))
+=>PYTHONTEX#octave#default#0#115#c####q4c.tex#239#
+disp(d(4,:))
+=>PYTHONTEX#octave#default#0#116#c####q4c.tex#239#
+disp(d(5,:))
+=>PYTHONTEX#octave#default#0#117#c####q4c.tex#239#
+disp(d(6,:))
+=>PYTHONTEX#octave#default#0#118#c####q4c.tex#239#
+disp(d(7,:))
+=>PYTHONTEX#octave#default#0#119#c####q4c.tex#239#
+disp(d(8,:))
+=>PYTHONTEX#octave#default#0#120#c####q4c.tex#239#
+disp(d(9,:))
+=>PYTHONTEX#octave#default#0#121#c####q4c.tex#239#
+disp(d(10,:))
+=>PYTHONTEX#octave#default#0#122#c####q4c.tex#239#
+disp(d(11,:))
+=>PYTHONTEX#octave#default#0#123#c####q4c.tex#239#
+disp(d(12,:))
+=>PYTHONTEX#octave#default#0#124#c####q4c.tex#239#
+disp(d(13,:))
+=>PYTHONTEX#octave#default#0#125#c####q4c.tex#239#
+disp(d(14,:))
+=>PYTHONTEX#octave#default#0#126#c####q4c.tex#239#
+disp(d(15,:))
+=>PYTHONTEX#octave#default#0#127#c####q4c.tex#258#
+disp(C2(1,:))
+=>PYTHONTEX#octave#default#0#128#c####q4c.tex#258#
+disp(C2(2,:))
+=>PYTHONTEX#octave#default#0#129#c####q4c.tex#258#
+disp(C2(3,:))
+=>PYTHONTEX#octave#default#0#130#c####q4c.tex#258#
+disp(C2(4,:))
+=>PYTHONTEX#octave#default#0#131#c####q4c.tex#258#
+disp(C2(5,:))
+=>PYTHONTEX#octave#default#0#132#c####q4c.tex#258#
+disp(C2(6,:))
+=>PYTHONTEX#octave#default#0#133#c####q4c.tex#258#
+disp(C2(7,:))
+=>PYTHONTEX#octave#default#0#134#c####q4c.tex#258#
+disp(C2(8,:))
+=>PYTHONTEX#octave#default#0#135#c####q4c.tex#258#
+disp(C2(9,:))
+=>PYTHONTEX#octave#default#0#136#c####q4c.tex#258#
+disp(C2(10,:))
+=>PYTHONTEX#octave#default#0#137#c####q4c.tex#258#
+disp(C2(11,:))
+=>PYTHONTEX#octave#default#0#138#c####q4c.tex#258#
+disp(C2(12,:))
+=>PYTHONTEX#octave#default#0#139#c####q4c.tex#258#
+disp(C2(13,:))
+=>PYTHONTEX#octave#default#0#140#c####q4c.tex#258#
+disp(C2(14,:))
+=>PYTHONTEX#octave#default#0#141#c####q4c.tex#258#
+disp(C2(15,:))
+=>PYTHONTEX#octave#default#0#142#c####q4c.tex#258#
+disp(C2(16,:))
+=>PYTHONTEX#octave#default#0#127#c####q4c.tex#258#
+disp(C2(1,:))
+=>PYTHONTEX#octave#default#0#128#c####q4c.tex#258#
+disp(C2(2,:))
+=>PYTHONTEX#octave#default#0#129#c####q4c.tex#258#
+disp(C2(3,:))
+=>PYTHONTEX#octave#default#0#130#c####q4c.tex#258#
+disp(C2(4,:))
+=>PYTHONTEX#octave#default#0#131#c####q4c.tex#258#
+disp(C2(5,:))
+=>PYTHONTEX#octave#default#0#132#c####q4c.tex#258#
+disp(C2(6,:))
+=>PYTHONTEX#octave#default#0#133#c####q4c.tex#258#
+disp(C2(7,:))
+=>PYTHONTEX#octave#default#0#134#c####q4c.tex#258#
+disp(C2(8,:))
+=>PYTHONTEX#octave#default#0#135#c####q4c.tex#258#
+disp(C2(9,:))
+=>PYTHONTEX#octave#default#0#136#c####q4c.tex#258#
+disp(C2(10,:))
+=>PYTHONTEX#octave#default#0#137#c####q4c.tex#258#
+disp(C2(11,:))
+=>PYTHONTEX#octave#default#0#138#c####q4c.tex#258#
+disp(C2(12,:))
+=>PYTHONTEX#octave#default#0#139#c####q4c.tex#258#
+disp(C2(13,:))
+=>PYTHONTEX#octave#default#0#140#c####q4c.tex#258#
+disp(C2(14,:))
+=>PYTHONTEX#octave#default#0#141#c####q4c.tex#258#
+disp(C2(15,:))
+=>PYTHONTEX#octave#default#0#142#c####q4c.tex#258#
+disp(C2(16,:))
+=>PYTHONTEX#octave#default#0#143#c####q4c.tex#261#
+disp(c([1:4],1)')
+=>PYTHONTEX#octave#default#0#144#c####q4c.tex#262#
+disp(c([1:4],2)')
+=>PYTHONTEX#octave#default#0#145#c####q4c.tex#263#
+disp(c([1:4],3)')
+=>PYTHONTEX#octave#default#0#146#c####q4c.tex#268#
+disp(c([1:4],7)')
+=>PYTHONTEX#octave#default#0#147#c####q4c.tex#269#
+disp(c([5:8],1)')
+=>PYTHONTEX#octave#default#0#148#c####q4c.tex#270#
+disp(c([5:8],2)')
+=>PYTHONTEX#octave#default#0#149#c####q4c.tex#271#
+disp(c([5:8],3)')
+=>PYTHONTEX#octave#default#0#150#c####q4c.tex#272#
+disp(c([5:8],4)')
+=>PYTHONTEX#octave#default#0#151#c####q4c.tex#273#
+disp(c([5:8],5)')
+=>PYTHONTEX#octave#default#0#152#c####q4c.tex#274#
+disp(c([5:8],6)')
+=>PYTHONTEX#octave#default#0#153#c####q4c.tex#275#
+disp(c([5:8],7)')
 =>PYTHONTEX:SETTINGS#
 version=0.17
 outputdir=pythontex-files-TMA03

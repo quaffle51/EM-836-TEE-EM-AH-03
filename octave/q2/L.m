@@ -1,0 +1,1 @@
+function L();  for n = 6:1000    L = [2, -2*(n+1), (n^2 + n + 2)/2];    r = roots(L);    if floor(r(1)) == ceil(r(1)) && floor(r(2)) == ceil(r(2))      printf("n=%4d %4d %4d m=%10.10d\n",n, r(1), r(2), log2((2*r(1) + 2*r(2) - 1)^2 + 7)-2);    endif  endforendfunction

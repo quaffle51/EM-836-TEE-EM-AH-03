@@ -1,0 +1,29 @@
+LIB "redcgs.lib";
+ring R=2,x,dp;
+poly f = x15-1;
+poly g = 1 + x + x2 + x3 + x6;
+poly h = 1 + x + x4 + x5 + x6 + x9;
+for (int k=0; k<=14; k=k+1)
+{
+    pdivi(x^k * h, f)[1];
+}
+printf("");
+for (k=0; k<=13; k=k+1)
+{
+    pdivi(x^k * (1+x) * h, f)[1];
+}
+printf("");
+for (k=0; k<=12; k=k+1)
+{
+    pdivi(x^k * (1+x2) * h, f)[1];
+}
+printf("");
+for (k=0; k<=12; k=k+1)
+{
+    pdivi(x^k * (1+x+x2) * h, f)[1];
+}
+printf("========================================");
+pdivi(x^13 * (1+x), g);
+pdivi(x^13*(1+x)*h,f);
+
+

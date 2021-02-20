@@ -1,0 +1,303 @@
+=>PYTHONTEX:STDOUT#0#code#
+=>PYTHONTEX:STDOUT#1#code#
+=>PYTHONTEX:STDOUT#2#c#
+ 2
+=>PYTHONTEX:STDOUT#3#c#
+ 90
+=>PYTHONTEX:STDOUT#4#c#
+ 73
+=>PYTHONTEX:STDOUT#5#c#
+ 5
+=>PYTHONTEX:STDOUT#6#c#
+ 5
+=>PYTHONTEX:STDOUT#7#c#
+ 2
+=>PYTHONTEX:STDOUT#8#c#
+ 90
+=>PYTHONTEX:STDOUT#9#c#
+ 90
+=>PYTHONTEX:STDOUT#10#c#
+ 73
+=>PYTHONTEX:STDOUT#11#c#
+ 3
+=>PYTHONTEX:STDOUT#12#c#
+ 89
+=>PYTHONTEX:STDOUT#13#c#
+ 17
+=>PYTHONTEX:STDOUT#14#c#
+1
+=>PYTHONTEX:STDOUT#15#c#
+89
+=>PYTHONTEX:STDOUT#16#c#
+3916
+=>PYTHONTEX:STDOUT#17#c#
+113564
+=>PYTHONTEX:STDOUT#18#c#
+117570
+=>PYTHONTEX:STDOUT#19#c#
+ 131072
+=>PYTHONTEX:STDOUT#20#c#
+ 17
+=>PYTHONTEX:STDOUT#21#code#
+=>PYTHONTEX:STDOUT#22#c#
+ 26400
+=>PYTHONTEX:STDOUT#23#c#
+1
+=>PYTHONTEX:STDOUT#24#c#
+15
+=>PYTHONTEX:STDOUT#25#c#
+105
+=>PYTHONTEX:STDOUT#26#c#
+455
+=>PYTHONTEX:STDOUT#27#c#
+576
+=>PYTHONTEX:STDOUT#28#c#
+576
+=>PYTHONTEX:STDOUT#29#c#
+576
+=>PYTHONTEX:STDOUT#30#code#
+=>PYTHONTEX:STDOUT#31#c#
+   1   1   0   0   1   1   0
+=>PYTHONTEX:STDOUT#32#c#
+   0   1   1   1   1   0   0
+=>PYTHONTEX:STDOUT#33#c#
+   1   0   0   1   1   0   0
+=>PYTHONTEX:STDOUT#34#c#
+   1   1   1   1   1   1   1
+=>PYTHONTEX:STDOUT#35#c#
+   0   0   1   0   1   1   0
+=>PYTHONTEX:STDOUT#36#c#
+   0   0   0   1   1   1   1
+=>PYTHONTEX:STDOUT#37#c#
+   1   1   0
+=>PYTHONTEX:STDOUT#38#c#
+   1   0   0
+=>PYTHONTEX:STDOUT#39#c#
+   0   0   1
+=>PYTHONTEX:STDOUT#40#c#
+   0   1   0
+=>PYTHONTEX:STDOUT#41#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#42#c#
+   1   0   1
+=>PYTHONTEX:STDOUT#43#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#44#c#
+   0   1   0
+=>PYTHONTEX:STDOUT#45#c#
+   1   1   0
+=>PYTHONTEX:STDOUT#46#c#
+   1   1   0
+=>PYTHONTEX:STDOUT#47#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#48#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#49#c#
+   0   1   1
+=>PYTHONTEX:STDOUT#50#c#
+   0   1   1
+=>PYTHONTEX:STDOUT#51#code#
+=>PYTHONTEX:STDOUT#52#c#
+   1   0   0   0   0   0   0
+=>PYTHONTEX:STDOUT#53#c#
+   1   0   0   0   0   0   0
+=>PYTHONTEX:STDOUT#54#c#
+   0   1   0   0   0   0   0
+=>PYTHONTEX:STDOUT#55#c#
+   0   0   0   0   0   0   0
+=>PYTHONTEX:STDOUT#56#c#
+   1   0   0   0   0   0   0
+=>PYTHONTEX:STDOUT#57#c#
+   0   1   0   0   0   0   0
+=>PYTHONTEX:STDOUT#58#c#
+   0   1   1   0   0   0   0
+=>PYTHONTEX:STDOUT#59#c#
+   0   0   1   1   0   0   0
+=>PYTHONTEX:STDOUT#60#c#
+   0   0   1   0   1   0   0
+=>PYTHONTEX:STDOUT#61#c#
+   0   0   0   1   1   0   0
+=>PYTHONTEX:STDOUT#62#c#
+   0   0   0   1   1   1   0
+=>PYTHONTEX:STDOUT#63#c#
+   0   0   0   1   1   0   0
+=>PYTHONTEX:STDOUT#64#c#
+   0   0   0   0   1   1   0
+=>PYTHONTEX:STDOUT#65#c#
+   0   0   0   0   1   0   0
+=>PYTHONTEX:STDOUT#66#c#
+   0   0   0   0   0   1   0
+=>PYTHONTEX:STDOUT#67#c#
+   0   0   0   0   0   1   0
+=>PYTHONTEX:STDOUT#68#c#
+   0   0   0   0   0   0   1
+=>PYTHONTEX:STDOUT#69#c#
+   0   0   0   0   0   0   1
+=>PYTHONTEX:STDOUT#70#code#
+=>PYTHONTEX:STDOUT#71#code#
+=>PYTHONTEX:STDOUT#72#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#73#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#74#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#75#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#76#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#77#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#78#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#79#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#80#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#81#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#82#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#83#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#84#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#85#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#86#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#87#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#88#c#
+   1   0   0
+=>PYTHONTEX:STDOUT#89#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#90#c#
+   0   1   1
+=>PYTHONTEX:STDOUT#91#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#92#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#93#c#
+   0   1   1
+=>PYTHONTEX:STDOUT#94#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#95#c#
+   1   0   0
+=>PYTHONTEX:STDOUT#96#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#97#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#98#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#99#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#100#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#101#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#102#c#
+   1   1   1
+=>PYTHONTEX:STDOUT#103#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#104#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#105#c#
+   1   1   0
+=>PYTHONTEX:STDOUT#106#c#
+   1   1   0
+=>PYTHONTEX:STDOUT#107#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#108#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#109#c#
+   1   1   0
+=>PYTHONTEX:STDOUT#110#c#
+   1   1   0
+=>PYTHONTEX:STDOUT#111#c#
+   0   0   0
+=>PYTHONTEX:STDOUT#112#c#
+   1   1   0   0   0   0   1   1
+=>PYTHONTEX:STDOUT#113#c#
+   1   1   0   0   0   0   1   1
+=>PYTHONTEX:STDOUT#114#c#
+   1   1   0   0   0   0   1   1
+=>PYTHONTEX:STDOUT#115#c#
+   1   1   0   0   1   1   0   1
+=>PYTHONTEX:STDOUT#116#c#
+   1   1   0   0   1   1   0   1
+=>PYTHONTEX:STDOUT#117#c#
+   1   1   0   0   1   1   0   1
+=>PYTHONTEX:STDOUT#118#c#
+   1   1   0   0   0   0   1   1
+=>PYTHONTEX:STDOUT#119#c#
+   0   1   1   0   0   1   1   0
+=>PYTHONTEX:STDOUT#120#c#
+   0   1   1   0   0   1   1   0
+=>PYTHONTEX:STDOUT#121#c#
+   0   1   1   0   0   1   1   0
+=>PYTHONTEX:STDOUT#122#c#
+   0   1   1   0   0   1   1   0
+=>PYTHONTEX:STDOUT#123#c#
+   0   1   1   0   0   1   1   0
+=>PYTHONTEX:STDOUT#124#c#
+   0   1   1   0   0   1   1   0
+=>PYTHONTEX:STDOUT#125#c#
+   0   1   1   0   0   1   1   0
+=>PYTHONTEX:STDOUT#126#c#
+   0   0   0   0   0   0   0   0
+=>PYTHONTEX:STDOUT#127#c#
+   0   0   0   0   0   0   0   0
+=>PYTHONTEX:STDOUT#128#c#
+   0   0   0   0   1   1   1   1
+=>PYTHONTEX:STDOUT#129#c#
+   0   0   1   1   0   0   1   1
+=>PYTHONTEX:STDOUT#130#c#
+   0   0   1   1   1   1   0   0
+=>PYTHONTEX:STDOUT#131#c#
+   0   1   0   1   0   1   0   1
+=>PYTHONTEX:STDOUT#132#c#
+   0   1   0   1   1   0   1   0
+=>PYTHONTEX:STDOUT#133#c#
+   0   1   1   0   0   1   1   0
+=>PYTHONTEX:STDOUT#134#c#
+   0   1   1   0   1   0   0   1
+=>PYTHONTEX:STDOUT#135#c#
+   1   1   1   1   1   1   1   1
+=>PYTHONTEX:STDOUT#136#c#
+   1   1   1   1   0   0   0   0
+=>PYTHONTEX:STDOUT#137#c#
+   1   1   0   0   1   1   0   0
+=>PYTHONTEX:STDOUT#138#c#
+   1   1   0   0   0   0   1   1
+=>PYTHONTEX:STDOUT#139#c#
+   1   0   1   0   1   0   1   0
+=>PYTHONTEX:STDOUT#140#c#
+   1   0   1   0   0   1   0   1
+=>PYTHONTEX:STDOUT#141#c#
+   1   0   0   1   1   0   0   1
+=>PYTHONTEX:STDOUT#142#c#
+   1   0   0   1   0   1   1   0
+=>PYTHONTEX:STDOUT#143#c#
+   1   0   1   1
+=>PYTHONTEX:STDOUT#144#c#
+   1   0   1   1
+=>PYTHONTEX:STDOUT#145#c#
+   1   0   1   1
+=>PYTHONTEX:STDOUT#146#c#
+   1   0   1   1
+=>PYTHONTEX:STDOUT#147#c#
+   0   1   1   0
+=>PYTHONTEX:STDOUT#148#c#
+   0   1   1   0
+=>PYTHONTEX:STDOUT#149#c#
+   0   1   1   0
+=>PYTHONTEX:STDOUT#150#c#
+   0   1   1   0
+=>PYTHONTEX:STDOUT#151#c#
+   0   1   1   0
+=>PYTHONTEX:STDOUT#152#c#
+   0   1   1   0
+=>PYTHONTEX:STDOUT#153#c#
+   0   1   1   0
+=>PYTHONTEX:DEPENDENCIES#
+=>PYTHONTEX:CREATED#
